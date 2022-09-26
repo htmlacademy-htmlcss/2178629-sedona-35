@@ -1,14 +1,16 @@
 <!DOCTYPE html>
 <html lang="ru">
+
   <head>
     <meta charset="utf-8">
     <title>HTML Academy: Седона</title>
     <base href="https://htmlacademy-htmlcss.github.io/2178629-sedona-35/2/">
 </head>
-  <body>
-    <header class="main-header">
 
-      <a href="#" class="logo"><img src="#" class="logo" alt="Логотип сайта &laquo;Седона&raquo;"></a>
+  <body>
+    <header class="main-header" data-test="header">
+
+      <a href="#" class="logo"><img src="#" class="logo" alt="Логотип сайта Седона"></a>
 
       <nav class="main-navigation">
 
@@ -38,16 +40,16 @@
           <li class="navigation-item">
             <a href="#" class="navigation-link">
               <span class="visually-hidden">Хочу сюда!</span>
-           </a>
+            </a>
           </li>
         </ul>
 
       </nav>
     </header>
 
-    <main>
+    <main data-test="main">
 
-      <h1 class="visually-hidden">Добро пожаловать в великолепную Седону, которая <strong>круче</strong>, чем Гранд-Каньон!</h1>
+      <h1 class="visually-hidden">Добро пожаловать в великолепную Седону, которая круче, чем Гранд-Каньон!</h1>
 
       <div class="site-cover">
         <img class="logo-banner" src="#" alt="Welcome to Sedona">
@@ -78,7 +80,7 @@
             <p>Да, по нему можно пройти! Если вы осмелитесь, разумеется</p>
             <img src="#" alt="Местная достопримечательность: Мост Дьявола.">
           </li>
-          </ul>
+        </ul>
       </section>
 
       <section class="services">
@@ -96,13 +98,14 @@
             <h3>Сувениры</h3>
             <p>Не только китайского, но и настоящего местного производства!</p>
           </li>
-          </ul>
+        </ul>
       </section>
 
       <section class="hotel-selection">
-        <h2>Заинтересовались?</h2>
+        <h2>Выбор лучшей гостиницы по предполагаемым датам поездки</h2>
+        <p class="section-visible-header">Заинтересовались?</p>
         <p>Укажите предполагаемые даты поездки,и мы покажем вам лучшие предложения гостиниц в Седоне</p>
-        <input type="button" value="Поиск гостиницы в Седоне">
+        <button type="button">Поиск гостиницы в Седоне</button>
       </section>
 
       <section class="newsletter-subscription">
@@ -120,12 +123,25 @@
     </main>
     <footer>
       <ul>
-        <li><a href="https://vk.com/htmlacademy"  target="_blank"><span class="visually-hidden">Вконтакте</span></a> </li>
-        <li><a href="https://t.me/htmlacademy" target="_blank"><span class="visually-hidden">Telegram</span></a> </li>
-        <li><a href="https://www.youtube.com/user/htmlacademyru" target="_blank"><span class="visually-hidden">YouTube</span></a> </li>
+        <li>
+          <a href="https://vk.com/htmlacademy" target="_blank">
+            <span class="visually-hidden">Вконтакте</span>
+          </a>
+        </li>
+        <li>
+          <a href="https://t.me/htmlacademy" target="_blank">
+            <span class="visually-hidden">Telegram</span>
+          </a>
+        </li>
+        <li>
+          <a href="https://www.youtube.com/user/htmlacademyru" target="_blank">
+            <span class="visually-hidden">YouTube</span>
+          </a>
+        </li>
       </ul>
       <a href="tel:+78128121212">+7 (812) 812-12-12</a>
       <a href="https://htmlacademy.ru" target="_blank"><img src="#" alt="Лого .HTMLacademy"></a>
     </footer>
   </body>
+
 </html>
