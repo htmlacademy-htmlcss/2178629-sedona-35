@@ -18,9 +18,10 @@ body {
   width: 1200px;
   margin: 0 auto;
   font-family: "PT sans", sans-serif;
+  font-weight: 400;
   font-size: 22px;
   line-height: 26px;
-  color: #000;
+  color: #333333;
   background-color: #ffffff;
   /*  В материалах академии говорится об обязательном
       указании цвета текста и подложки в правиле для body
@@ -57,28 +58,36 @@ ul {
 }
 
 .button-blue {
-  background-color: #82B3D3;
+  background-color: #82b3d3;
 }
 
 .button-green {
-  background-color: #7DB54F;
+  background-color: #7db54f;
 }
 
 .button-transparent {
   background-color: transparent;
 }
 
+/* .visually-hidden */
 h1.visually-hidden,
 h2.visually-hidden {
-  font-size: 24px;
-  color: #aaaaaa;
-  /* Временно "притушил" невидимые заголовки */
+    position: absolute;
+    width: 1px;
+    height: 1px;
+    margin: -1px;
+    border: 0;
+    padding: 0;
+    white-space: nowrap;
+    clip-path: inset(100%);
+    clip: rect(0 0 0 0);
+    overflow: hidden;
+    /* Спрятал невидимые заголовки, в других элементах пока оставил  */
 }
 
 /* Header */
 
 .navigation-link {
-  font-family: inherit;
   font-size: 20px;
   line-height: 24px;
   font-weight: 700;
@@ -95,7 +104,7 @@ h2.visually-hidden {
 .hero-block {
   width: 100%;
   height: 485px;
-  background-color: #82B3D3;
+  background-color: #82b3d3;
   background-image: url("../images/style-images/hero-bg.jpg");
   background-size: cover;
 }
@@ -103,9 +112,9 @@ h2.visually-hidden {
 /* Преимущества */
 
 .advantages h2 {
-  font-family: inherit;
   font-size: 30px;
   line-height: 36px;
+  color: #000000;
   text-transform: uppercase;
 }
 
@@ -117,6 +126,7 @@ h2.visually-hidden {
   font-size: 24px;
   line-height: 28px;
   text-transform: uppercase;
+  color: #000000;
 }
 
 .advantages-description {
@@ -128,10 +138,13 @@ h2.visually-hidden {
   background-color: rgba(131, 179, 211, 0.2);
 }
 
-.advantages-item:first-child,
-.advantages-item:last-child {
+.advantages-dark-blue {
+  background-color: #82b3d3;
+}
+
+.advantages-dark-blue .advantages-title,
+.advantages-dark-blue .advantages-description {
   color: #ffffff;
-  background-color: #82B3D3;
 }
 
 /* Популярные услуги */
@@ -141,9 +154,9 @@ h2.visually-hidden {
 }
 
 .services-title {
-  font-family: inherit;
   font-size: 24px;
   line-height: 28px;
+  color: #000000;
   text-transform: uppercase;
 }
 
@@ -155,10 +168,10 @@ h2.visually-hidden {
 /* Выбор гостинцы */
 
 .section-visible-header {
-  font-family: inherit;
   font-weight: 700;
   font-size: 30px;
   line-height: 36px;
+  color: #000000;
   text-transform: uppercase;
 }
 
@@ -168,22 +181,25 @@ h2.visually-hidden {
   width: 100%;
   height: 415px;
   color: #ffffff;
-  background-color: #82B3D3;
+  background-color: #82b3d3;
   text-align: center;
   background-image: url("../images/style-images/subscribe-blurred-bg.jpg");
   background-size: cover;
 }
 
-.newsletter-subscription.no-bg {
+.newsletter-subscription h2 {
+  font-size: 30px;
+  line-height: 36px;
+  text-transform: uppercase;
+}
+
+.no-bg {
   color: #000000;
   background: none;
 }
 
-.newsletter-subscription h2 {
-  font-family: inherit;
-  font-size: 30px;
-  line-height: 36px;
-  text-transform: uppercase;
+.no-bg p {
+  color: #333333;
 }
 
 /*
@@ -192,7 +208,6 @@ h2.visually-hidden {
 */
 
 .main-header {
-  font-family: inherit;
   color: #ffffff;
   background-image: url("../images/style-images/filter-blurred-bg.jpg");
   background-size: 100%;
@@ -205,9 +220,12 @@ main h1 {
   line-height: 78px;
 }
 
-.crumbs,
-.crumbs a {
-  font-family: inherit;
+.crumbs-list {
+  list-style-type: none;
+}
+
+.crumb,
+.crumb a {
   font-size: 16px;
   line-height: 21px;
   color: #ffffff;
@@ -259,27 +277,25 @@ main h1 {
 .hotel-card p {
   font-size: 18px;
   line-height: 21px;
-  font-weight: 400;
 }
 
 .raiting {
+  font-weight: 400;
   display: block;
   width: 140px;
-  font-weight: 400;
-  color: #000000;
-  background-color: #F2F2F2;
+  color: #333333;
+  background-color: #f2f2f2;
 }
 
 .pagination-link {
   display: block;
   width: 60px;
-  font-family: inherit;
   font-size: 20px;
   font-weight: 700;
   line-height: 28px;
   text-align: center;
   color: #ffffff;
-  background-color: #82B3D3;
+  background-color: #82b3d3;
   text-decoration: none;
   padding-top: 16px;
   padding-bottom: 16px;
@@ -290,7 +306,7 @@ main h1 {
 
 .pagination-link-current {
   color: #000000;
-  background-color: #F2F2F2;
+  background-color: #f2f2f2;
 }
 
 /* Конец стилей "Гостиницы Седоны"
@@ -298,9 +314,8 @@ main h1 {
 
 /* Footer */
 
-footer address a {
+.footer-contacts-adress .footer-phone-number {
   font-size: 40px;
-  font-weight: 400;
   font-style: normal;
   text-decoration: none;
   color: #000000;
