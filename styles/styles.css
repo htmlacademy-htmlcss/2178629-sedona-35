@@ -15,7 +15,293 @@
 }
 
 body {
+  width: 1200px;
+  margin: 0 auto;
   font-family: "PT sans", sans-serif;
+  font-size: 22px;
+  line-height: 26px;
+  color: #000;
+  background-color: #ffffff;
+  /*  В материалах академии говорится об обязательном
+      указании цвета текста и подложки в правиле для body
+      — не уверен, стоит ли это делать
+      для такого тривиального случая - "черным по белому"?
+   */
+}
+
+ul {
+  list-style-type: none;
+  margin: 0;
+  padding: 0;
+}
+
+.button {
+  font-family: inherit;
+  font-size: 16px;
+  line-height: 20px;
+  font-weight: 700;
+  text-align: center;
+  color: #ffffff;
+  background-color: #756157;
+  text-decoration: none;
+  text-transform: uppercase;
+  padding: 8px;
+  border: 0;
+  border-radius: 4px;
+  cursor: pointer;
+}
+
+.big-button {
+  font-size: 20px;
+  line-height: 36px;
+}
+
+.button-blue {
+  background-color: #82B3D3;
+}
+
+.button-green {
+  background-color: #7DB54F;
+}
+
+.button-transparent {
+  background-color: transparent;
+}
+
+h1.visually-hidden,
+h2.visually-hidden {
+  font-size: 24px;
+  color: #aaaaaa;
+  /* Временно "притушил" невидимые заголовки */
+}
+
+/* Header */
+
+.navigation-link {
+  font-family: inherit;
+  font-size: 20px;
+  line-height: 24px;
+  font-weight: 700;
+  color: #000000;
+  text-decoration: none;
+}
+
+.main-index {
+  text-align: center;
+}
+
+/* Hero */
+
+.hero-block {
+  width: 100%;
+  height: 485px;
+  background-color: #82B3D3;
+  background-image: url("../images/style-images/hero-bg.jpg");
+  background-size: cover;
+}
+
+/* Преимущества */
+
+.advantages h2 {
+  font-family: inherit;
+  font-size: 30px;
+  line-height: 36px;
+  text-transform: uppercase;
+}
+
+.advantages-item {
+  background-color: rgba(131, 179, 211, 0.12);
+}
+
+.advantages-title {
+  font-size: 24px;
+  line-height: 28px;
+  text-transform: uppercase;
+}
+
+.advantages-description {
   font-size: 18px;
   line-height: 21px;
+}
+
+.advantages-item:nth-child(3) {
+  background-color: rgba(131, 179, 211, 0.2);
+}
+
+.advantages-item:first-child,
+.advantages-item:last-child {
+  color: #ffffff;
+  background-color: #82B3D3;
+}
+
+/* Популярные услуги */
+
+.services-list-item:nth-child(2n+1) {
+  background-color: rgba(131, 179, 211, 0.12);
+}
+
+.services-title {
+  font-family: inherit;
+  font-size: 24px;
+  line-height: 28px;
+  text-transform: uppercase;
+}
+
+.services-description {
+  font-size: 18px;
+  line-height: 21px;
+}
+
+/* Выбор гостинцы */
+
+.section-visible-header {
+  font-family: inherit;
+  font-weight: 700;
+  font-size: 30px;
+  line-height: 36px;
+  text-transform: uppercase;
+}
+
+/* Рассылка */
+
+.newsletter-subscription {
+  width: 100%;
+  height: 415px;
+  color: #ffffff;
+  background-color: #82B3D3;
+  text-align: center;
+  background-image: url("../images/style-images/subscribe-blurred-bg.jpg");
+  background-size: cover;
+}
+
+.newsletter-subscription.no-bg {
+  color: #000000;
+  background: none;
+}
+
+.newsletter-subscription h2 {
+  font-family: inherit;
+  font-size: 30px;
+  line-height: 36px;
+  text-transform: uppercase;
+}
+
+/*
+==========================================
+              Гостиницы Седоны
+*/
+
+.main-header {
+  font-family: inherit;
+  color: #ffffff;
+  background-image: url("../images/style-images/filter-blurred-bg.jpg");
+  background-size: 100%;
+  background-repeat: no-repeat;
+  background-color: #1e4a64;
+}
+
+main h1 {
+  font-size: 60px;
+  line-height: 78px;
+}
+
+.crumbs,
+.crumbs a {
+  font-family: inherit;
+  font-size: 16px;
+  line-height: 21px;
+  color: #ffffff;
+  text-decoration: none;
+}
+
+.hotels-search-filter fieldset{
+  border: 0;
+}
+
+.hotels-search-filter legend {
+  font-weight: 700;
+  font-size: 20px;
+  line-height: 24px;
+}
+
+.hotels-search-filter label {
+  font-size: 18px;
+  line-height: 23px;
+}
+
+.hotel-search-results .section-visible-header {
+  font-size: 30px;
+  line-height: 36px;
+}
+
+.display-button {
+  color: #000000;
+  background-color: transparent;
+  padding: 16px;
+  border: 02px solid;
+  border-radius: 4px;
+  cursor: pointer;
+}
+
+/* Карточки гостиниц */
+
+.hotel-card a:not(.button) {
+  color: #000000;
+  text-decoration: none;
+}
+
+.hotel-card h3 {
+  font-size: 24px;
+  line-height: 28px;
+  font-weight: 700;
+}
+
+.hotel-card p {
+  font-size: 18px;
+  line-height: 21px;
+  font-weight: 400;
+}
+
+.raiting {
+  display: block;
+  width: 140px;
+  font-weight: 400;
+  color: #000000;
+  background-color: #F2F2F2;
+}
+
+.pagination-link {
+  display: block;
+  width: 60px;
+  font-family: inherit;
+  font-size: 20px;
+  font-weight: 700;
+  line-height: 28px;
+  text-align: center;
+  color: #ffffff;
+  background-color: #82B3D3;
+  text-decoration: none;
+  padding-top: 16px;
+  padding-bottom: 16px;
+  border: 0;
+  border-radius: 4px;
+  cursor: pointer;
+}
+
+.pagination-link-current {
+  color: #000000;
+  background-color: #F2F2F2;
+}
+
+/* Конец стилей "Гостиницы Седоны"
+   ===================================== */
+
+/* Footer */
+
+footer address a {
+  font-size: 40px;
+  font-weight: 400;
+  font-style: normal;
+  text-decoration: none;
+  color: #000000;
 }
