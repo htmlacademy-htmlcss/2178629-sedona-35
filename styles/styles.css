@@ -22,12 +22,17 @@ body {
   font-size: 22px;
   line-height: 26px;
   color: #333333;
-  background-color: #ffffff;
+  background-color: #f2f2f2;
   /*  В материалах академии говорится об обязательном
       указании цвета текста и подложки в правиле для body
       — не уверен, стоит ли это делать
       для такого тривиального случая - "черным по белому"?
    */
+}
+
+.page-container {
+  background-color: #ffffff;
+  box-shadow: 0 0 15px rgba(0, 0, 0, 0.2);
 }
 
 ul {
