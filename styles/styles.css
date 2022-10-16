@@ -14,7 +14,12 @@
   font-display: swap;
 }
 
+html {
+  height: 100%;
+}
+
 body {
+  min-height: 100%;
   width: 1200px;
   margin: 0 auto;
   font-family: "PT sans", sans-serif;
@@ -22,18 +27,26 @@ body {
   font-size: 22px;
   line-height: 26px;
   color: #333333;
-  background-color: #ffffff;
-  /*  В материалах академии говорится об обязательном
-      указании цвета текста и подложки в правиле для body
-      — не уверен, стоит ли это делать
-      для такого тривиального случая - "черным по белому"?
-   */
+  background-color: #f2f2f2;
 }
 
-ul {
+.page-container {
+  min-height: 100vh;
+  display: flex;
+  flex-direction: column;
+  background-color: #ffffff;
+  box-shadow: 0 0 15px rgba(0, 0, 0, 0.2);
+}
+
+ul,
+ol {
   list-style-type: none;
   margin: 0;
   padding: 0;
+}
+
+h1 {
+  margin: 0;
 }
 
 .button {
@@ -72,22 +85,50 @@ ul {
 /* .visually-hidden */
 h1.visually-hidden,
 h2.visually-hidden {
-    position: absolute;
-    width: 1px;
-    height: 1px;
-    margin: -1px;
-    border: 0;
-    padding: 0;
-    white-space: nowrap;
-    clip-path: inset(100%);
-    clip: rect(0 0 0 0);
-    overflow: hidden;
-    /* Спрятал невидимые заголовки, в других элементах пока оставил  */
+  position: absolute;
+  width: 1px;
+  height: 1px;
+  margin: -1px;
+  border: 0;
+  padding: 0;
+  white-space: nowrap;
+  clip-path: inset(100%);
+  clip: rect(0 0 0 0);
+  overflow: hidden;
+  /* Спрятал невидимые заголовки, в других элементах пока оставил  */
 }
+
+/* Временное отключение срединных элементов - для отладки Sticky Footer
+section,
+.hotel-cards {
+  display: none;
+} */
 
 /* Header */
 
+.main-navigation {
+  height: 64px;
+  display: flex;
+  justify-content: space-between;
+}
+
+.logo {
+  margin-right: 30px;
+}
+
+.site-navigation {
+  margin-left: 70px;
+  display: flex;
+}
+
+.user-navigation {
+  margin-right: 70px;
+  display: flex;
+}
+
 .navigation-link {
+  display: block;
+  padding: 0 16px;
   font-size: 20px;
   line-height: 24px;
   font-weight: 700;
@@ -96,8 +137,14 @@ h2.visually-hidden {
 }
 
 .main-index {
+  flex-grow: 1;
   text-align: center;
 }
+
+.main-page {
+  flex-grow: 1;
+}
+
 
 /* Hero */
 
@@ -118,7 +165,13 @@ h2.visually-hidden {
   text-transform: uppercase;
 }
 
+.advantages-list {
+  display: flex;
+  flex-wrap: wrap;
+}
+
 .advantages-item {
+  width: 33.3%;
   background-color: rgba(131, 179, 211, 0.12);
 }
 
@@ -140,6 +193,8 @@ h2.visually-hidden {
 
 .advantages-dark-blue {
   background-color: #82b3d3;
+  display: flex;
+  width: auto;
 }
 
 .advantages-dark-blue .advantages-title,
@@ -148,6 +203,14 @@ h2.visually-hidden {
 }
 
 /* Популярные услуги */
+
+.services-list {
+  display: flex;
+}
+
+.services-list-item {
+  width: 33.3%;
+}
 
 .services-list-item:nth-child(2n+1) {
   background-color: rgba(131, 179, 211, 0.12);
@@ -213,6 +276,7 @@ h2.visually-hidden {
   background-size: 100%;
   background-repeat: no-repeat;
   background-color: #1e4a64;
+  padding: 35px 70px;
 }
 
 main h1 {
@@ -233,7 +297,13 @@ main h1 {
 }
 
 .hotels-search-filter fieldset{
-  border: 0;
+  border: none;
+  padding-left: 0;
+  margin-inline: 0;
+}
+
+.serch-form {
+  display: flex;
 }
 
 .hotels-search-filter legend {
@@ -263,6 +333,33 @@ main h1 {
 
 /* Карточки гостиниц */
 
+.hotel-cards-sorter {
+  display: flex;
+  margin: 35px 70px 0 70px;
+}
+
+.cards-sort {
+  margin-left: auto;
+}
+
+.cards-display {
+  display: flex;
+  margin-left: 70px;
+}
+
+.hotel-cards {
+  margin-left: 70px;
+  margin-right: 70px;
+  display: flex;
+  justify-content: space-between;
+  flex-wrap: wrap;
+}
+
+.hotel-card {
+  display: block;
+  width: 340px;
+}
+
 .hotel-card a:not(.button) {
   color: #000000;
   text-decoration: none;
@@ -285,6 +382,11 @@ main h1 {
   width: 140px;
   color: #333333;
   background-color: #f2f2f2;
+}
+
+.hotel-cards-pagination {
+  margin-left: 70px;
+  display: flex;
 }
 
 .pagination-link {
@@ -313,6 +415,18 @@ main h1 {
    ===================================== */
 
 /* Footer */
+
+.footer-container {
+  width: 1060px;
+  margin: 0 auto;
+  display: flex;
+  justify-content: space-between;
+}
+
+.footer-contacts-adress {
+  width: 500px;
+  text-align: center;
+}
 
 .footer-contacts-adress .footer-phone-number {
   font-size: 40px;
