@@ -1,0 +1,436 @@
+@font-face {
+  font-family: "PT sans";
+  src: url("/fonts/ptsans-400.woff2") format("woff2");
+  font-style: normal;
+  font-weight: 400;
+  font-display: swap;
+}
+
+@font-face {
+  font-family: "PT sans";
+  src: url("/fonts/ptsans-700.woff2") format("woff2");
+  font-style: normal;
+  font-weight: 700;
+  font-display: swap;
+}
+
+html {
+  height: 100%;
+}
+
+body {
+  min-height: 100%;
+  width: 1200px;
+  margin: 0 auto;
+  font-family: "PT sans", sans-serif;
+  font-weight: 400;
+  font-size: 22px;
+  line-height: 26px;
+  color: #333333;
+  background-color: #f2f2f2;
+}
+
+.page-container {
+  min-height: 100vh;
+  display: flex;
+  flex-direction: column;
+  background-color: #ffffff;
+  box-shadow: 0 0 15px rgba(0, 0, 0, 0.2);
+}
+
+ul,
+ol {
+  list-style-type: none;
+  margin: 0;
+  padding: 0;
+}
+
+h1 {
+  margin: 0;
+}
+
+.button {
+  font-family: inherit;
+  font-size: 16px;
+  line-height: 20px;
+  font-weight: 700;
+  text-align: center;
+  color: #ffffff;
+  background-color: #756157;
+  text-decoration: none;
+  text-transform: uppercase;
+  padding: 8px;
+  border: 0;
+  border-radius: 4px;
+  cursor: pointer;
+}
+
+.big-button {
+  font-size: 20px;
+  line-height: 36px;
+}
+
+.button-blue {
+  background-color: #82b3d3;
+}
+
+.button-green {
+  background-color: #7db54f;
+}
+
+.button-transparent {
+  background-color: transparent;
+}
+
+/* .visually-hidden */
+h1.visually-hidden,
+h2.visually-hidden {
+  position: absolute;
+  width: 1px;
+  height: 1px;
+  margin: -1px;
+  border: 0;
+  padding: 0;
+  white-space: nowrap;
+  clip-path: inset(100%);
+  clip: rect(0 0 0 0);
+  overflow: hidden;
+  /* Спрятал невидимые заголовки, в других элементах пока оставил  */
+}
+
+/* Временное отключение срединных элементов - для отладки Sticky Footer
+section,
+.hotel-cards {
+  display: none;
+} */
+
+/* Header */
+
+.main-navigation {
+  height: 64px;
+  display: flex;
+  justify-content: space-between;
+}
+
+.logo {
+  margin-right: 30px;
+}
+
+.site-navigation {
+  margin-left: 70px;
+  display: flex;
+}
+
+.user-navigation {
+  margin-right: 70px;
+  display: flex;
+}
+
+.navigation-link {
+  display: block;
+  padding: 0 16px;
+  font-size: 20px;
+  line-height: 24px;
+  font-weight: 700;
+  color: #000000;
+  text-decoration: none;
+}
+
+.main-index {
+  flex-grow: 1;
+  text-align: center;
+}
+
+.main-page {
+  flex-grow: 1;
+}
+
+
+/* Hero */
+
+.hero-block {
+  width: 100%;
+  height: 485px;
+  background-color: #82b3d3;
+  background-image: url("../images/style-images/hero-bg.jpg");
+  background-size: cover;
+}
+
+/* Преимущества */
+
+.advantages h2 {
+  font-size: 30px;
+  line-height: 36px;
+  color: #000000;
+  text-transform: uppercase;
+}
+
+.advantages-list {
+  display: flex;
+  flex-wrap: wrap;
+}
+
+.advantages-item {
+  width: 33.3%;
+  background-color: rgba(131, 179, 211, 0.12);
+}
+
+.advantages-title {
+  font-size: 24px;
+  line-height: 28px;
+  text-transform: uppercase;
+  color: #000000;
+}
+
+.advantages-description {
+  font-size: 18px;
+  line-height: 21px;
+}
+
+.advantages-item:nth-child(3) {
+  background-color: rgba(131, 179, 211, 0.2);
+}
+
+.advantages-dark-blue {
+  background-color: #82b3d3;
+  display: flex;
+  width: auto;
+}
+
+.advantages-dark-blue .advantages-title,
+.advantages-dark-blue .advantages-description {
+  color: #ffffff;
+}
+
+/* Популярные услуги */
+
+.services-list {
+  display: flex;
+}
+
+.services-list-item {
+  width: 33.3%;
+}
+
+.services-list-item:nth-child(2n+1) {
+  background-color: rgba(131, 179, 211, 0.12);
+}
+
+.services-title {
+  font-size: 24px;
+  line-height: 28px;
+  color: #000000;
+  text-transform: uppercase;
+}
+
+.services-description {
+  font-size: 18px;
+  line-height: 21px;
+}
+
+/* Выбор гостинцы */
+
+.section-visible-header {
+  font-weight: 700;
+  font-size: 30px;
+  line-height: 36px;
+  color: #000000;
+  text-transform: uppercase;
+}
+
+/* Рассылка */
+
+.newsletter-subscription {
+  width: 100%;
+  height: 415px;
+  color: #ffffff;
+  background-color: #82b3d3;
+  text-align: center;
+  background-image: url("../images/style-images/subscribe-blurred-bg.jpg");
+  background-size: cover;
+}
+
+.newsletter-subscription h2 {
+  font-size: 30px;
+  line-height: 36px;
+  text-transform: uppercase;
+}
+
+.no-bg {
+  color: #000000;
+  background: none;
+}
+
+.no-bg p {
+  color: #333333;
+}
+
+/*
+==========================================
+              Гостиницы Седоны
+*/
+
+.main-header {
+  color: #ffffff;
+  background-image: url("../images/style-images/filter-blurred-bg.jpg");
+  background-size: 100%;
+  background-repeat: no-repeat;
+  background-color: #1e4a64;
+  padding: 35px 70px;
+}
+
+main h1 {
+  font-size: 60px;
+  line-height: 78px;
+}
+
+.crumbs-list {
+  list-style-type: none;
+}
+
+.crumb,
+.crumb a {
+  font-size: 16px;
+  line-height: 21px;
+  color: #ffffff;
+  text-decoration: none;
+}
+
+.hotels-search-filter fieldset{
+  border: none;
+  padding-left: 0;
+  margin-inline: 0;
+}
+
+.serch-form {
+  display: flex;
+}
+
+.hotels-search-filter legend {
+  font-weight: 700;
+  font-size: 20px;
+  line-height: 24px;
+}
+
+.hotels-search-filter label {
+  font-size: 18px;
+  line-height: 23px;
+}
+
+.hotel-search-results .section-visible-header {
+  font-size: 30px;
+  line-height: 36px;
+}
+
+.display-button {
+  color: #000000;
+  background-color: transparent;
+  padding: 16px;
+  border: 02px solid;
+  border-radius: 4px;
+  cursor: pointer;
+}
+
+/* Карточки гостиниц */
+
+.hotel-cards-sorter {
+  display: flex;
+  margin: 35px 70px 0 70px;
+}
+
+.cards-sort {
+  margin-left: auto;
+}
+
+.cards-display {
+  display: flex;
+  margin-left: 70px;
+}
+
+.hotel-cards {
+  margin-left: 70px;
+  margin-right: 70px;
+  display: flex;
+  justify-content: space-between;
+  flex-wrap: wrap;
+}
+
+.hotel-card {
+  display: block;
+  width: 340px;
+}
+
+.hotel-card a:not(.button) {
+  color: #000000;
+  text-decoration: none;
+}
+
+.hotel-card h3 {
+  font-size: 24px;
+  line-height: 28px;
+  font-weight: 700;
+}
+
+.hotel-card p {
+  font-size: 18px;
+  line-height: 21px;
+}
+
+.raiting {
+  font-weight: 400;
+  display: block;
+  width: 140px;
+  color: #333333;
+  background-color: #f2f2f2;
+}
+
+.hotel-cards-pagination {
+  margin-left: 70px;
+  display: flex;
+}
+
+.pagination-link {
+  display: block;
+  width: 60px;
+  font-size: 20px;
+  font-weight: 700;
+  line-height: 28px;
+  text-align: center;
+  color: #ffffff;
+  background-color: #82b3d3;
+  text-decoration: none;
+  padding-top: 16px;
+  padding-bottom: 16px;
+  border: 0;
+  border-radius: 4px;
+  cursor: pointer;
+}
+
+.pagination-link-current {
+  color: #000000;
+  background-color: #f2f2f2;
+}
+
+/* Конец стилей "Гостиницы Седоны"
+   ===================================== */
+
+/* Footer */
+
+.footer-container {
+  width: 1060px;
+  margin: 0 auto;
+  display: flex;
+  justify-content: space-between;
+}
+
+.footer-contacts-adress {
+  width: 500px;
+  text-align: center;
+}
+
+.footer-contacts-adress .footer-phone-number {
+  font-size: 40px;
+  font-style: normal;
+  text-decoration: none;
+  color: #000000;
+}
