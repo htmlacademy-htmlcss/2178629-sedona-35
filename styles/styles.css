@@ -30,6 +30,10 @@ body {
   background-color: #f2f2f2;
 }
 
+* {
+  box-sizing: border-box;
+}
+
 .page-container {
   min-height: 100%;
   display: flex;
@@ -130,7 +134,6 @@ section,
 }
 
 .navigation-link {
-  box-sizing: border-box;
   min-height: 64px;
   display: block;
   padding: 20px 16px;
@@ -189,7 +192,6 @@ section,
 }
 
 .advantages-item {
-  box-sizing: border-box;
   min-height: 384px;
   width: 33.3%;
   background-color: rgba(131, 179, 211, 0.12);
@@ -248,7 +250,6 @@ section,
 }
 
 .services-list-item {
-  box-sizing: border-box;
   width: 33.3%;
   min-height: 384px;
   padding: 80px 85px 20px 85px;
@@ -331,7 +332,6 @@ section,
 
 .newsletter-subscription-form input {
   width: 100%;
-  box-sizing: border-box;
   font-size: 18px;
   line-height: 24px;
   padding-left: 20px;
@@ -364,7 +364,7 @@ section,
   background-size: 100%;
   background-repeat: no-repeat;
   background-color: #1e4a64;
-  padding: 35px 70px;
+  padding: 35px 70px 70px 70px;
 }
 
 .main-header h1 {
@@ -400,11 +400,11 @@ section,
   margin-inline: 0;
 }
 
-fieldset legend {
+.serch-form legend {
   margin-bottom: 32px;
 }
 
-fieldset label:not(:last-of-type) {
+.serch-form label:not(:last-of-type) {
   margin-bottom: 16px;
 }
 
@@ -418,12 +418,12 @@ fieldset label:not(:last-of-type) {
   display: flex;
 }
 
-.serch-form .infrastructure {
+.infrastructure {
   min-width: 200px;
   margin-right: 20px;
 }
 
-.serch-form .hotel-type {
+.hotel-type {
   min-width: 200px;
   margin-right: 20px;
 }
@@ -435,7 +435,6 @@ fieldset label:not(:last-of-type) {
 
 .price input {
   width: 100%;
-  box-sizing: border-box;
   font-size: 18px;
   line-height: 24px;
   padding: 12px 20px 12px 20px;
@@ -465,7 +464,7 @@ fieldset label:not(:last-of-type) {
   align-self: flex-end;
 }
 
-.serch-form .submit-section button:last-of-type {
+.serch-form button:last-of-type {
   margin-top: 30px;
 }
 
@@ -598,7 +597,6 @@ fieldset label:not(:last-of-type) {
 
 .button-hotel-card {
   display: inline-block;
-  box-sizing: border-box;
   text-decoration: none;
   text-transform: uppercase;
   width: calc(50% - 10px);
