@@ -392,71 +392,84 @@ section,
 
 /* Фильтр поиска гостиниц */
 
+
+form.hotels-search-filter {
+  display: flex;
+}
+
 .hotels-search-filter fieldset{
   display: flex;
   flex-direction: column;
   border: none;
   padding: 0;
-  margin-inline: 0;
+  margin: 0;
 }
 
-.serch-form legend {
+.hotels-search-filter legend {
+  font-size: 20px;
   margin-bottom: 32px;
 }
 
-.serch-form label:not(:last-of-type) {
+.hotels-search-filter label:not(:last-of-type) {
+  display: block;
   margin-bottom: 16px;
 }
 
-.price .price-input {
-  width: 100%;
-  display: flex;
-}
-
-
-.serch-form {
-  display: flex;
-}
-
-.infrastructure {
+.hotels-search-filter .infrastructure,
+.hotels-search-filter .hotel-type {
+  display: block;
   min-width: 200px;
   margin-right: 20px;
 }
 
-.hotel-type {
-  min-width: 200px;
-  margin-right: 20px;
-}
-
-.serch-form .price {
-  min-width: 288px;
+.hotels-search-filter .price {
+  max-width: 288px;
   margin-left: auto;
+}
+
+.price.input-fields {
+  display: flex;
+  width: 100%;
+}
+
+.input-fields > div {
+  position: relative;
 }
 
 .price input {
   width: 100%;
   font-size: 18px;
   line-height: 24px;
-  padding: 12px 20px 12px 20px;
+  padding: 12px 60px 12px 20px;
   border: 0;
 }
 
-.price input:first-of-type {
+.price input::-webkit-outer-spin-button,
+.price input::-webkit-inner-spin-button {
+  -webkit-appearance: none;
+  margin: 0;
+}
+
+.min-price-field-container {
   margin: 0 2px 0 0;
+}
+
+.min-price-field-container input {
   border-radius: 4px 0 0 4px;
 }
 
-
-.price input:last-of-type {
+.max-price-field-container input {
   border-radius: 0 4px 4px 0;
 }
 
-.price .input-fields {
-  display: flex;
-  width: 100%;
+.input-fields label {
+  position: absolute;
+  top: 12px;
+  right: 20px;
+  color: #000000;
 }
 
-.serch-form .submit-section {
+.hotels-search-filter .submit-section {
   min-width: 191px;
   margin-left: 70px;
   display: flex;
@@ -464,8 +477,8 @@ section,
   align-self: flex-end;
 }
 
-.serch-form button:last-of-type {
-  margin-top: 30px;
+.hotels-search-filter button:last-of-type {
+  margin-top: 33px;
 }
 
 .hotels-search-filter legend {
@@ -478,7 +491,6 @@ section,
   font-size: 18px;
   line-height: 23px;
 }
-
 
 .display-button {
   color: #000000;
@@ -591,7 +603,8 @@ section,
 }
 
 .hotel-card p:last-of-type {
-  width: auto;
+  display: block;
+  width: max-content;
   white-space: nowrap;
 }
 
@@ -647,6 +660,7 @@ section,
 .pagination-link-dots {
   color: #000000;
   background-color: transparent;
+  cursor: default;
   }
 
 /* Конец стилей "Гостиницы Седоны"

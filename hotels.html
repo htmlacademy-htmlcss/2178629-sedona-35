@@ -71,7 +71,7 @@
           <section>
             <h2 class="visually-hidden">Фильтр выбора гостиницы</h2>
             <div class="hotels-search-filter">
-              <form class="serch-form" action="https://echo.htmlacademy.ru" method="post">
+              <form class="hotels-search-filter" action="https://echo.htmlacademy.ru" method="post">
                 <fieldset class="infrastructure">
                   <legend>Инфраструктура:</legend>
                   <label><input type="checkbox" name="infrastructure" checked value="pool">Бассейн</label>
@@ -87,8 +87,14 @@
                 <fieldset class="price">
                   <legend>Стоимость, &#8381;</legend>
                   <div class="price input-fields">
-                    <input type="number" name="min-price" min="0" max="9000" step="100" id="min-price-field" placeholder="0">
-                    <input type="number" name="max-price" min="0" max="9000" step="100" id="max-price-field" placeholder="9000">
+                    <div class="min-price-field-container">
+                      <label for="min-price-field">от</label>
+                      <input type="number" name="min-price" min="0" max="9000" step="100" id="min-price-field" placeholder="0">
+                    </div>
+                    <div class="max-price-field-container">
+                      <label for="max-price-field">до</label>
+                      <input type="number" name="max-price" min="0" max="9000" step="100" id="max-price-field" placeholder="9000">
+                    </div>
                   </div>
                 </fieldset>
                 <div class="submit-section">
