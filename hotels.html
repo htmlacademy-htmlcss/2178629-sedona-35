@@ -72,27 +72,29 @@
             <h2 class="visually-hidden">Фильтр выбора гостиницы</h2>
             <div class="hotels-search-filter">
               <form class="serch-form" action="https://echo.htmlacademy.ru" method="post">
-                <fieldset>
+                <fieldset class="infrastructure">
                   <legend>Инфраструктура:</legend>
                   <label><input type="checkbox" name="infrastructure" checked value="pool">Бассейн</label>
                   <label><input type="checkbox" name="infrastructure" checked value="parking">Парковка</label>
                   <label><input type="checkbox" name="infrastructure" value="wi-fi">Wi-Fi</label>
                 </fieldset>
-                <fieldset>
+                <fieldset class="hotel-type">
                   <legend>Тип Жилья:</legend>
                   <label><input type="radio" name="hotel-type" checked value="hotel">Отель</label>
                   <label><input type="radio" name="hotel-type" value="motel">Мотель</label>
                   <label><input type="radio" name="hotel-type" value="appartament">Аппартаменты</label>
                 </fieldset>
-                <fieldset>
+                <fieldset class="price">
                   <legend>Стоимость, &#8381;</legend>
-                  <input type="number" name="min-price" min="0" max="9000" step="100" id="min-price-field"
-                    placeholder="От 0">
-                  <input type="number" name="max-price" min="0" max="9000" step="100" id="max-price-field"
-                    placeholder="До 9000">
+                  <div class="price input-fields">
+                    <input type="number" name="min-price" min="0" max="9000" step="100" id="min-price-field" placeholder="0">
+                    <input type="number" name="max-price" min="0" max="9000" step="100" id="max-price-field" placeholder="9000">
+                  </div>
                 </fieldset>
-                <button type="submit" class="button button-blue">Применить</button>
-                <button type="reset" class="button button-transparent">Сбросить</button>
+                <div class="submit-section">
+                  <button type="submit" class="button button-blue">Применить</button>
+                  <button type="reset" class="button button-transparent">Сбросить</button>
+                </div>
               </form>
             </div>
           </section>
@@ -137,7 +139,7 @@
                 <p class="star-raiting">
                 <span class="visually-hidden">Класс гостиницы: 4 звезды</span>
                 </p>
-                <p class="button button-hotel-card raiting">Рейтинг: 8.5</p>
+                <span class="button button-hotel-card raiting">Рейтинг: 8.5</span>
               </div>
              </li>
             <li class="hotel-card">
@@ -157,7 +159,7 @@
                 <p class="star-raiting">
                 <span class="visually-hidden">Класс гостиницы: 4 звезды</span>
                 </p>
-                <p class="button button-hotel-card raiting">Рейтинг: 9.2</p>
+                <span class="button button-hotel-card raiting">Рейтинг: 9.2</span>
               </div>
             </li>
             <li class="hotel-card">
@@ -177,7 +179,7 @@
                 <p class="star-raiting">
                   <span class="visually-hidden">Класс гостиницы: 3 звезды</span>
                 </p>
-                <p class="button button-hotel-card raiting">Рейтинг: 6.9</p>
+                <span class="button button-hotel-card raiting">Рейтинг: 6.9</span>
               </div>
             </li>
             <li class="hotel-card">
@@ -198,7 +200,7 @@
                 <p class="star-raiting">
                   <span class="visually-hidden">Класс гостиницы: 2 звезды</span>
                 </p>
-                <p class="button button-hotel-card raiting">Рейтинг: 5.0</p>
+                <span class="button button-hotel-card raiting">Рейтинг: 5.0</span>
               </div>
             </li>
           </ul>
@@ -226,11 +228,11 @@
         <section class="newsletter-subscription no-bg">
           <h2>Подпишитесь на рассылку</h2>
           <p>Только полезная информация и никакого спама,<br>честное бойскаутское!</p>
-          <form action="https://echo.htmlacademy.ru" method="post">
+          <form class="newsletter-subscription-form" action="https://echo.htmlacademy.ru" method="post">
             <label>
               <span class="visually-hidden">Введите адрес вашей электронной почты</span>
-              <input type="email" name="newsletterSubscriptionEmail" placeholder="Ваш адрес">
             </label>
+            <input type="email" name="newsletterSubscriptionEmail" placeholder="Ваш e-mail">
             <button type="submit" class="button big-button button-blue">Подписаться</button>
           </form>
         </section>
