@@ -144,6 +144,10 @@ button.button-green:active {
 
 /* Header */
 
+.page-header {
+  z-index: 1;
+}
+
 .main-navigation {
   position: relative;
   display: flex;
@@ -228,6 +232,8 @@ button.button-green:active {
 }
 
 .user-navigation .navigation-item:last-of-type a {
+  margin-left: 16px;
+  padding-left: 0;
   padding-right: 0;
 }
 
@@ -515,13 +521,17 @@ button.button-green:active {
   margin-bottom: 40px;
 }
 
-.crumb,
-.crumb a {
+.crumb {
+  display: inline;
   font-size: 16px;
   line-height: 21px;
+  margin-left: 0;
+  padding-left: 0;
+}
+
+.crumb a {
   color: #ffffff;
   text-decoration: none;
-  margin-right: 6px;
 }
 
 .crumb a:hover {
@@ -532,14 +542,14 @@ button.button-green:active {
   color: rgb(255, 255, 255, 0.30);
 }
 
-.crumb:not(:last-of-type)::after {
+.crumb + .crumb::before {
   display: inline-block;
   content: "";
-  width: 6px;
+  width: 7px;
   height: 10px;
+  margin-left: 10px;
+  margin-right: 10px;
   background-image: url(../images/style-images/breadcrubs-arrow.svg);
-  background-repeat: no-repeat;
-  background-position: center;
 }
 
 /* Фильтр поиска гостиниц */
@@ -687,9 +697,8 @@ form.hotels-search-filter {
 .display-button {
   display: block;
   color: #000000;
-  background-color: transparent;
   width: 48px;
-  height: 49px;
+  height: 48px;
   border: 02px solid #e5e5e5;
   border-radius: 4px;
   cursor: pointer;
@@ -912,18 +921,16 @@ form.hotels-search-filter {
 }
 
 .footer-contacts-social-item a{
-  position: relative;
-  display: block;
+  display: flex;
   width: 48px;
   height: 40px;
   fill: #83b3d3;
+  justify-content: center;
+  align-items: center;
 }
 
 .social-icon {
-  position: absolute;
-  left: 50%;
-  top: 50%;
-  transform: translateX(-50%) translateY(-50%);
+  display: block;
 }
 
 .footer-contacts-social-item a:hover,
