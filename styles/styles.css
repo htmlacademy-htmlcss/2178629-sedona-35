@@ -345,7 +345,9 @@ button.button-green:active {
 
 .advantages-image {
   width: 66.6%;
-  }
+  height: auto;
+  object-fit: cover;
+}
 
 .advantages-dark-blue .advantages-title,
 .advantages-dark-blue .advantages-description {
@@ -479,6 +481,21 @@ button.button-green:active {
   border-radius: 4px 0 0 4px;
 }
 
+.newsletter-subscription-form input:hover {
+  background-color: #e6e6e6;
+}
+
+.newsletter-subscription-form input:focus {
+  background-color: #e6e6e6;
+  outline: 3px solid #83b3d3;
+}
+
+.newsletter-subscription-form input:active {
+  background-color: #e6e6e6;
+  outline: auto;
+}
+
+
 .newsletter-subscription-form button {
   border-radius: 0 4px 4px 0;
 }
@@ -564,7 +581,6 @@ form.hotels-search-filter {
   flex-direction: column;
   border: none;
   padding: 0;
-  margin: 0;
 }
 
 .hotels-search-filter legend {
@@ -572,16 +588,80 @@ form.hotels-search-filter {
   margin-bottom: 32px;
 }
 
-.hotels-search-filter label:not(:last-of-type) {
+.radio-check-selectors label {
   display: block;
+  position: relative;
+  padding-left: 38px;
+  cursor: pointer;
+  width: max-content;
+}
+
+.radio-check-selectors label:hover {
+  opacity: .6;
+}
+
+input:focus + label::before {
+  outline: 3px solid #83b3b3;
+}
+
+.radio-check-selectors  label:active {
+  opacity: .3;
+}
+
+.hotels-search-filter label:not(:last-of-type) {
   margin-bottom: 16px;
 }
 
-.hotels-search-filter .infrastructure,
-.hotels-search-filter .hotel-type {
+.radio-check-selectors  {
   display: block;
   min-width: 200px;
   margin-right: 20px;
+}
+
+.radio-check-selectors input {
+  appearance: none;
+  position: absolute;
+}
+
+.radio-check-selectors label::before {
+  position: absolute;
+  content: "";
+  width: 20px;
+  height: 20px;
+  left: 2px;
+  top: 2px;
+  background-color: #ffffff;
+}
+
+.infrastructure label::before {
+  border-radius: 4px;
+}
+
+.hotel-type label::before {
+  border-radius: 50%;
+}
+
+.checkbox:checked + label::after {
+  position: absolute;
+  content: "";
+  width: 20px;
+  height: 20px;
+  left: 2px;
+  top: 2px;
+  background-image: url("../images/style-images/checkbox-check.svg");
+  background-repeat: no-repeat;
+  background-position: center;
+}
+
+.radio:checked + label::after {
+  position: absolute;
+  content: "";
+  width: 10px;
+  height:10px;
+  left: 7px;
+  top: 7px;
+  border-radius: 50%;
+  background-color: #3F5E72;
 }
 
 .hotels-search-filter .price {
@@ -601,9 +681,30 @@ form.hotels-search-filter {
 .price input {
   width: 100%;
   font-size: 18px;
+  font-weight: 700;
   line-height: 24px;
-  padding: 12px 60px 12px 20px;
+  padding: 13px 60px 11px 20px;
   border: 0;
+}
+
+.price input:hover {
+  background-color: #e6e6e6;
+}
+
+.price input:focus {
+  background-color: #e6e6e6;
+  outline: 3px solid #83b3d3;
+}
+
+.price input:active {
+  background-color: #f2f2f2;
+  outline-offset: -2px;
+  outline: 2px solid #000000;
+}
+
+.price input::placeholder {
+  color: #000000;
+  font-weight: 700;
 }
 
 .price input::-webkit-outer-spin-button,
@@ -628,7 +729,45 @@ form.hotels-search-filter {
   position: absolute;
   top: 12px;
   right: 20px;
-  color: #000000;
+  color: rgb(0, 0, 0, 0.3);
+}
+
+.price-range-fader {
+  position: relative;
+  margin-top: 44px;
+  height: 4px;
+  background-color: rgba(255, 255, 255, 0.3);
+}
+
+.price-range-bar {
+  position: absolute;
+  height: 4px;
+  background-color: #ffffff;
+}
+
+.price-range-button {
+  position: absolute;
+  margin: 0;
+  width: 20px;
+  height: 20px;
+  border: none;
+  border-radius: 5px;
+  background-color: #ffffff;
+  top: -8px;
+  cursor: pointer;
+}
+
+.price-range-button:hover,
+.price-range-button:focus {
+  outline: 3px solid #83b3d3;
+}
+
+.price-range-button:active {
+  outline: 2px solid #83b3d3;
+}
+
+.button-max {
+  right: 0;
 }
 
 .hotels-search-filter .submit-section {
@@ -639,8 +778,8 @@ form.hotels-search-filter {
   align-self: flex-end;
 }
 
-.hotels-search-filter button:last-of-type {
-  margin-top: 33px;
+.submit-section button:last-of-type {
+  margin-top: 30px;
 }
 
 .hotels-search-filter legend {
@@ -675,8 +814,34 @@ form.hotels-search-filter {
 }
 
 .cards-sort {
+  appearance: none;
   width: 298px;
   margin-left: auto;
+  outline-offset: -2px;
+  outline:  2px solid #e5e5e5;
+  border-radius: 4px;
+  padding: 14px 20px;
+  font-size: 18px;
+  line-height: 21px;
+  background-image: url("../images/style-images/select-dropdown-arrow.svg");
+  background-repeat: no-repeat;
+  background-position: right 20px top 50%;
+  cursor: pointer;
+}
+
+.cards-sort:hover,
+.cards-sort:focus {
+  outline: 2px solid #68a2ca;
+}
+
+.cards-sort:active {
+  outline-color: #000000;
+}
+
+.cards-sort:disabled {
+  color: #000000;
+  outline-color: #000000;
+  opacity: 0.3;
 }
 
 .cards-display {
