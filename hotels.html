@@ -84,21 +84,37 @@
               <form class="hotels-search-filter" action="https://echo.htmlacademy.ru" method="post">
                 <fieldset class="infrastructure radio-check-selectors">
                   <legend>Инфраструктура:</legend>
-                  <input class="selector checkbox" type="checkbox" id="checkbox-pool" name="infrastructure" checked value="pool">
-                  <label for="checkbox-pool">Бассейн</label>
-                  <input class="selector checkbox" type="checkbox" id="checkbox-parking" name="infrastructure" checked value="parking">
-                  <label for="checkbox-parking">Парковка</label>
-                  <input class="selector checkbox" type="checkbox" id="checkbox-wifi" name="infrastructure" value="wi-fi">
-                  <label for="checkbox-wifi">Wi-Fi</label>
+                  <ul class="infrastructure criteria-list">
+                    <li class="criteria-list-item">
+                      <input class="criteria checkbox" type="checkbox" id="checkbox-pool" name="infrastructure" checked value="pool">
+                      <label for="checkbox-pool">Бассейн</label>
+                    </li>
+                    <li class="criteria-list-item">
+                      <input class="criteria checkbox" type="checkbox" id="checkbox-parking" name="infrastructure" checked value="parking">
+                      <label for="checkbox-parking">Парковка</label>
+                    </li>
+                    <li class="criteria-list-item">
+                      <input class="criteria checkbox" type="checkbox" id="checkbox-wifi" name="infrastructure" value="wi-fi">
+                      <label for="checkbox-wifi">Wi-Fi</label>
+                    </li>
+                  </ul>
                 </fieldset>
                 <fieldset class="hotel-type radio-check-selectors">
                   <legend>Тип Жилья:</legend>
-                  <input class="selector radio" type="radio" id="radio-hotel" name="hotel-type" checked value="hotel">
-                  <label for="radio-hotel">Гостиница</label>
-                  <input class="selector radio" type="radio" id="radio-motel" name="hotel-type" value="motel">
-                  <label for="radio-motel">Мотель</label>
-                  <input class="selector radio" type="radio" id="radio-appartaments" name="hotel-type" value="appartament">
-                  <label for="radio-appartaments">Аппартаменты</label>
+                  <ul class="hotel-type criteria-list">
+                    <li class="criteria-list-item">
+                      <input class="criteria radio" type="radio" id="radio-hotel" name="hotel-type" checked value="hotel">
+                      <label for="radio-hotel">Гостиница</label>
+                    </li>
+                    <li class="criteria-list-item">
+                      <input class="criteria radio" type="radio" id="radio-motel" name="hotel-type" value="motel">
+                      <label for="radio-motel">Мотель</label>
+                    </li>
+                    <li class="criteria-list-item">
+                      <input class="criteria radio" type="radio" id="radio-appartaments" name="hotel-type" value="appartament">
+                      <label for="radio-appartaments">Аппартаменты</label>
+                    </li>
+                  </ul>
                 </fieldset>
                 <fieldset class="price">
                   <legend>Стоимость, &#8381;</legend>

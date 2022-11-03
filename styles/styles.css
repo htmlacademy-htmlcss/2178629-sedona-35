@@ -606,6 +606,12 @@ form.hotels-search-filter {
   margin-bottom: 32px;
 }
 
+.hotels-search-filter ul {
+  margin: 0;
+  padding: 0;
+  list-style-type: none;
+}
+
 .radio-check-selectors label {
   display: block;
   position: relative;
@@ -626,7 +632,7 @@ input:focus + label::before {
   opacity: .3;
 }
 
-.hotels-search-filter label:not(:last-of-type) {
+.hotels-search-filter li:not(:last-of-type) {
   margin-bottom: 16px;
 }
 
