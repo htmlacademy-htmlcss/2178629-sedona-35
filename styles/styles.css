@@ -1241,13 +1241,6 @@ input:focus + label::before {
   border-radius: 4px;
 }
 
-.check-in input,
-.check-out input {
-  background-image: url(../images/style-images/calendar.svg);
-  background-repeat: no-repeat;
-  background-position: top 16px right 22px;
-}
-
 .modal-search-form input::placeholder {
   color: #000000;
 }
@@ -1264,6 +1257,17 @@ input:focus + label::before {
   position: relative;
   grid-column: 2 / -1;
   margin-bottom: 48px;
+}
+
+.button-in-input-field {
+  position: absolute;
+  top: 0;
+  right: 6px;
+  padding: 15px;
+  background: none;
+  border-style: none;
+  color: rgba(0, 0, 0, 0.3);
+  cursor: pointer;
 }
 
 .alert {
@@ -1315,17 +1319,20 @@ input:focus + label::before {
 }
 
 .number-up:hover,
-.number-down:hover {
+.number-down:hover,
+.button-in-input-field:hover {
   color: #000000;
 }
 
 .number-up:focus,
-.number-down:focus {
+.number-down:focus,
+.button-in-input-field:focus {
   outline: none;
 }
 
 .number-up:focus::after,
-.number-down:focus::after {
+.number-down:focus::after,
+.button-in-input-field:focus::after {
   position: absolute;
   content: "";
   top: 50%;
