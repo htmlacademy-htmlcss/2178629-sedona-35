@@ -717,6 +717,7 @@ input:focus + label::before {
   line-height: 24px;
   padding: 13px 60px 11px 20px;
   border: 0;
+  -moz-appearance: textfield;
 }
 
 .price input:hover {
@@ -1297,6 +1298,7 @@ input:focus + label::before {
 
 .persons-container input {
   text-align: center;
+  -moz-appearance: textfield;
 }
 
 .persons-container input::-webkit-outer-spin-button,
