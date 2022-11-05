@@ -285,8 +285,8 @@ body {
 }
 
 .hero-banner {
-  margin-top: 52px;
-  margin-bottom: 76px;
+  margin-top: 51px;
+  margin-bottom: 77px;
 }
 
 .hero-block::after {
@@ -475,7 +475,7 @@ body {
 
 .hotel-selection a{
   padding-top: 12px; /* pixel-perfect */
-  /* padding-bottom: 14px; pixel-perfect */
+  padding-bottom: 14px; /* pixel-perfect */
 }
 
 /* Рассылка */
@@ -556,7 +556,7 @@ body {
   background-size: 100%;
   background-repeat: no-repeat;
   background-color: #1e4a64;
-  padding: 35px 70px 70px 70px;
+  padding: 35px 70px 74px 70px;
   background-size: cover;
 }
 
@@ -572,6 +572,7 @@ body {
   padding: 0;
   list-style-type: none;
   display: flex;
+  flex-wrap: wrap;
   margin-bottom: 40px;
 }
 
@@ -611,6 +612,7 @@ body {
 
 form.hotels-search-filter {
   display: flex;
+  margin-left: -4px;
 }
 
 .hotels-search-filter fieldset{
@@ -622,7 +624,7 @@ form.hotels-search-filter {
 
 .hotels-search-filter legend {
   font-size: 20px;
-  margin-bottom: 32px;
+  margin-bottom: 31px;
 }
 
 .hotels-search-filter ul {
@@ -658,7 +660,7 @@ input:focus + label::before {
 .radio-check-selectors  {
   display: block;
   min-width: 200px;
-  margin-right: 20px;
+  margin-right: 17px;
 }
 
 .radio-check-selectors input {
@@ -823,7 +825,8 @@ input:focus + label::before {
 }
 
 .submit-section button:last-of-type {
-  margin-top: 30px;
+  margin-top: 32px;
+  padding-bottom: 5px;
 }
 
 .hotels-search-filter legend {
@@ -840,14 +843,15 @@ input:focus + label::before {
 /* Карточки гостиниц */
 
 .hotel-search-results {
-  padding: 50px 70px 60px 70px;
+  padding: 50px 70px 52px 70px;
 }
 
 .hotel-search-results .section-visible-header {
   font-size: 30px;
   line-height: 36px;
   margin: 0;
-  margin-top: 7px;
+  margin-top: 6px;
+  margin-left: -1px;
   padding: 0;
   padding-right: 40px;
 }
@@ -855,7 +859,6 @@ input:focus + label::before {
 .hotel-cards-sorter {
   display: flex;
   margin-bottom: 40px;
-  align-items: flex-end;
 }
 
 .cards-sort {
@@ -865,9 +868,10 @@ input:focus + label::before {
   outline-offset: -2px;
   outline:  2px solid #e5e5e5;
   border-radius: 4px;
-  padding: 14px 20px;
+  padding: 14px 24px;
   font-size: 18px;
   line-height: 21px;
+  letter-spacing: -0.5px;
   background-image: url("../images/style-images/select-dropdown-arrow.svg");
   background-repeat: no-repeat;
   background-position: right 20px top 50%;
@@ -891,7 +895,10 @@ input:focus + label::before {
 
 .cards-display {
   display: flex;
+  flex-wrap: wrap;
   margin: 0;
+  margin-right: 1px;
+  margin-left: 30px;
 }
 
 .cards-display li {
@@ -959,7 +966,9 @@ input:focus + label::before {
 .hotel-card {
   display: flex;
   flex-direction: column;
-  padding: 20px;
+  padding: 18px;
+  /* padding-top: 17px;
+  padding-right: 19px; */
   border-width: 1px;
   border-style: solid;
   border-color: #e6e6e6;
@@ -1050,6 +1059,7 @@ input:focus + label::before {
 
 .raiting {
   font-weight: 400;
+  letter-spacing: -0.6px;
   color: #333333;
   background-color: #f2f2f2;
   pointer-events: none;
@@ -1057,6 +1067,7 @@ input:focus + label::before {
 
 .hotel-cards-pagination {
   display: flex;
+  flex-wrap: wrap;
   margin: 0;
   padding: 0;
   list-style-type: none;
@@ -1070,6 +1081,7 @@ input:focus + label::before {
   padding: 16px 0 16px 0;
   cursor: pointer;
   margin-right: 8px;
+  margin-bottom: 8px;
 }
 
 .pagination-link-current {
@@ -1230,6 +1242,7 @@ input:focus + label::before {
   margin-top: 0;
   margin-bottom: 64px;
   font-size: 30px;
+  padding-right: 60px;
   font-weight: 700;
   line-height: 36px;
   text-transform: uppercase;
@@ -1237,7 +1250,7 @@ input:focus + label::before {
 
 .modal-search-form {
   display: grid;
-  grid-template-columns: 137px 1fr 131px 113px;
+  grid-template-columns: 137px 1fr 130px 113px;
 }
 
 .modal-search-form .label {
@@ -1253,7 +1266,8 @@ input:focus + label::before {
   font-size: 18px;
   line-height: 24px;
   font-weight: 700;
-  padding: 12px 24px 12px 24px;
+  letter-spacing: -0.8px;
+  padding: 13px 24px 11px 20px;
   background-color: #f2f2f2;
   border: none;
   border-radius: 4px;
@@ -1436,4 +1450,6 @@ button.tooltip-toggle {
 .modal-search-form > button {
   grid-column: 1 / -1;
   border-radius: 10px;
+  padding-top: 12px;
+  padding-bottom: 12px;
 }
