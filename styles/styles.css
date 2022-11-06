@@ -36,6 +36,11 @@ body {
   box-sizing: border-box;
 }
 
+img {
+  max-width: 100%;
+  object-fit: contain;
+}
+
 /* Buttons */
 
 .button {
@@ -59,7 +64,7 @@ body {
 }
 
 .button:active {
-  color: rgba(255, 255, 255, 0.30);
+  color: rgba(255, 255, 255, 0.3);
 }
 
 .button:disabled,
@@ -88,7 +93,7 @@ body {
 }
 
 .button.button-blue:active {
-  color: rgba(255, 255, 255, 0.30);
+  color: rgba(255, 255, 255, 0.3);
 }
 
 .button-green {
@@ -101,7 +106,7 @@ body {
 }
 
 .button.button-green:active {
-  color: rgba(255, 255, 255, 0.30);
+  color: rgba(255, 255, 255, 0.3);
 }
 
 .button-transparent {
@@ -110,7 +115,7 @@ body {
 
 .button-transparent:hover {
   background-color: transparent;
-  opacity: 0.60;
+  opacity: 0.6;
 }
 
 .button-transparent:focus {
@@ -214,7 +219,7 @@ body {
   pointer-events: none;
 }
 
-.navigation-link-current:after {
+.navigation-link-current::after {
   position: absolute;
   content: "";
   height: 2px;
@@ -413,7 +418,7 @@ body {
   background-color: rgba(131, 179, 211, 0.12);
 }
 
-.services-list-item:before {
+.services-list-item::before {
   position: absolute;
   content: "";
   width: 80px;
@@ -424,15 +429,15 @@ body {
   transform: translateX(-50%);
 }
 
-.services-list-item.services-living:before {
+.services-list-item.services-living::before {
   background-image: url("../images/style-images/service-living.svg");
 }
 
-.services-list-item.services-food:before {
+.services-list-item.services-food::before {
   background-image: url("../images/style-images/service-food.svg");
 }
 
-.services-list-item.services-gifts:before {
+.services-list-item.services-gifts::before {
   background-image: url("../images/style-images/service-gifts.svg");
 }
 
@@ -473,7 +478,7 @@ body {
   margin-bottom: 61px;
 }
 
-.hotel-selection a{
+.hotel-selection a {
   padding-top: 12px; /* pixel-perfect */
   padding-bottom: 14px; /* pixel-perfect */
 }
@@ -553,10 +558,9 @@ body {
 .main-header {
   color: #ffffff;
   background-image: url("../images/style-images/filter-blurred-bg.jpg");
-  background-size: 100%;
   background-repeat: no-repeat;
   background-color: #1e4a64;
-  padding: 35px 70px 74px 70px;
+  padding: 35px 70px 73px 70px;
   background-size: cover;
 }
 
@@ -590,11 +594,11 @@ body {
 }
 
 .crumb a:hover {
-  color: rgb(255, 255, 255, 0.60);
+  color: rgb(255, 255, 255, 0.6);
 }
 
 .crumb a:active {
-  color: rgb(255, 255, 255, 0.30);
+  color: rgb(255, 255, 255, 0.3);
 }
 
 .crumb + .crumb::before {
@@ -604,7 +608,7 @@ body {
   height: 10px;
   margin-left: 10px;
   margin-right: 10px;
-  background-image: url(../images/style-images/breadcrubs-arrow.svg);
+  background-image: url("../images/style-images/breadcrubs-arrow.svg");
 }
 
 /* Фильтр поиска гостиниц */
@@ -615,7 +619,7 @@ form.hotels-search-filter {
   margin-left: -4px;
 }
 
-.hotels-search-filter fieldset{
+.hotels-search-filter fieldset {
   display: flex;
   flex-direction: column;
   border: none;
@@ -624,7 +628,9 @@ form.hotels-search-filter {
 
 .hotels-search-filter legend {
   font-size: 20px;
-  margin-bottom: 31px;
+  line-height: 24px;
+  font-weight: 700;
+  margin-bottom: 32px;
 }
 
 .hotels-search-filter ul {
@@ -642,22 +648,22 @@ form.hotels-search-filter {
 }
 
 .radio-check-selectors label:hover {
-  opacity: .6;
+  opacity: 0.6;
 }
 
 input:focus + label::before {
   outline: 3px solid #83b3b3;
 }
 
-.radio-check-selectors  label:active {
-  opacity: .3;
+.radio-check-selectors label:active {
+  opacity: 0.3;
 }
 
 .hotels-search-filter li:not(:last-of-type) {
   margin-bottom: 16px;
 }
 
-.radio-check-selectors  {
+.radio-check-selectors {
   display: block;
   min-width: 200px;
   margin-right: 17px;
@@ -702,11 +708,11 @@ input:focus + label::before {
   position: absolute;
   content: "";
   width: 10px;
-  height:10px;
+  height: 10px;
   left: 7px;
   top: 7px;
   border-radius: 50%;
-  background-color: #3F5E72;
+  background-color: #3f5e72;
 }
 
 .hotels-search-filter .price {
@@ -829,12 +835,6 @@ input:focus + label::before {
   padding-bottom: 5px;
 }
 
-.hotels-search-filter legend {
-  font-weight: 700;
-  font-size: 20px;
-  line-height: 24px;
-}
-
 .hotels-search-filter label {
   font-size: 18px;
   line-height: 23px;
@@ -866,7 +866,7 @@ input:focus + label::before {
   width: 298px;
   margin-left: auto;
   outline-offset: -2px;
-  outline:  2px solid #e5e5e5;
+  outline: 2px solid #e5e5e5;
   border-radius: 4px;
   padding: 14px 24px;
   font-size: 18px;
@@ -959,7 +959,8 @@ input:focus + label::before {
   list-style-type: none;
   display: grid;
   grid-template-columns: repeat(auto-fill, minmax(300px, 1fr));
-  gap: 20px;
+  column-gap: 20px;
+  row-gap: 23px;
   margin-bottom: 80px;
 }
 
@@ -967,8 +968,7 @@ input:focus + label::before {
   display: flex;
   flex-direction: column;
   padding: 18px;
-  /* padding-top: 17px;
-  padding-right: 19px; */
+  padding-top: 17px;
   border-width: 1px;
   border-style: solid;
   border-color: #e6e6e6;
@@ -1035,7 +1035,7 @@ input:focus + label::before {
 
 .star-raiting {
   display: block;
-  background-image: url('data:image/png;base64,iVBORw0KGgoAAAANSUhEUgAAADAAAAAiCAMAAAAuwqolAAAAGXRFWHRTb2Z0d2FyZQBBZG9iZSBJbWFnZVJlYWR5ccllPAAAAyZpVFh0WE1MOmNvbS5hZG9iZS54bXAAAAAAADw/eHBhY2tldCBiZWdpbj0i77u/IiBpZD0iVzVNME1wQ2VoaUh6cmVTek5UY3prYzlkIj8+IDx4OnhtcG1ldGEgeG1sbnM6eD0iYWRvYmU6bnM6bWV0YS8iIHg6eG1wdGs9IkFkb2JlIFhNUCBDb3JlIDcuMS1jMDAwIDc5LmVkYTJiM2ZhYywgMjAyMS8xMS8xNy0xNzoyMzoxOSAgICAgICAgIj4gPHJkZjpSREYgeG1sbnM6cmRmPSJodHRwOi8vd3d3LnczLm9yZy8xOTk5LzAyLzIyLXJkZi1zeW50YXgtbnMjIj4gPHJkZjpEZXNjcmlwdGlvbiByZGY6YWJvdXQ9IiIgeG1sbnM6eG1wPSJodHRwOi8vbnMuYWRvYmUuY29tL3hhcC8xLjAvIiB4bWxuczp4bXBNTT0iaHR0cDovL25zLmFkb2JlLmNvbS94YXAvMS4wL21tLyIgeG1sbnM6c3RSZWY9Imh0dHA6Ly9ucy5hZG9iZS5jb20veGFwLzEuMC9zVHlwZS9SZXNvdXJjZVJlZiMiIHhtcDpDcmVhdG9yVG9vbD0iQWRvYmUgUGhvdG9zaG9wIDIzLjEgKFdpbmRvd3MpIiB4bXBNTTpJbnN0YW5jZUlEPSJ4bXAuaWlkOjE1ODMxMjA3NTQ4MTExRUQ4QjQ3RTZBM0E0NkEyNzQxIiB4bXBNTTpEb2N1bWVudElEPSJ4bXAuZGlkOjE1ODMxMjA4NTQ4MTExRUQ4QjQ3RTZBM0E0NkEyNzQxIj4gPHhtcE1NOkRlcml2ZWRGcm9tIHN0UmVmOmluc3RhbmNlSUQ9InhtcC5paWQ6MTU4MzEyMDU1NDgxMTFFRDhCNDdFNkEzQTQ2QTI3NDEiIHN0UmVmOmRvY3VtZW50SUQ9InhtcC5kaWQ6MTU4MzEyMDY1NDgxMTFFRDhCNDdFNkEzQTQ2QTI3NDEiLz4gPC9yZGY6RGVzY3JpcHRpb24+IDwvcmRmOlJERj4gPC94OnhtcG1ldGE+IDw/eHBhY2tldCBlbmQ9InIiPz5/GolWAAAAHlBMVEWCs9OBs9OCs9KCstKBstKDtNKDs9OCs9SBsdEAAAB9VKxxAAAACnRSTlP///////////8AsswszwAAAKlJREFUeNq0ldsOgzAMQ+2ksPH/PzxNQ6xpIRch+ohyateOBLbiwfzpXQReLALAwwABlgDAl7gN8AuwAACBxF2AP4BpAIgksAmCI6OC+vOcLbEwv79Bc3a6R7fz+eakJJnrTawauZ96YGbeFGddJZpGERiSWkJgzCkEUATaEb54njA4YldJAPThMwGsdhf0qjp0AmbV2oXEH5hWTVxgPdFXOgCzP5SPAAMAM6Ur4JsjUFQAAAAASUVORK5CYII=');
+  background-image: url("data:image/png;base64,iVBORw0KGgoAAAANSUhEUgAAADAAAAAiCAMAAAAuwqolAAAAGXRFWHRTb2Z0d2FyZQBBZG9iZSBJbWFnZVJlYWR5ccllPAAAAyZpVFh0WE1MOmNvbS5hZG9iZS54bXAAAAAAADw/eHBhY2tldCBiZWdpbj0i77u/IiBpZD0iVzVNME1wQ2VoaUh6cmVTek5UY3prYzlkIj8+IDx4OnhtcG1ldGEgeG1sbnM6eD0iYWRvYmU6bnM6bWV0YS8iIHg6eG1wdGs9IkFkb2JlIFhNUCBDb3JlIDcuMS1jMDAwIDc5LmVkYTJiM2ZhYywgMjAyMS8xMS8xNy0xNzoyMzoxOSAgICAgICAgIj4gPHJkZjpSREYgeG1sbnM6cmRmPSJodHRwOi8vd3d3LnczLm9yZy8xOTk5LzAyLzIyLXJkZi1zeW50YXgtbnMjIj4gPHJkZjpEZXNjcmlwdGlvbiByZGY6YWJvdXQ9IiIgeG1sbnM6eG1wPSJodHRwOi8vbnMuYWRvYmUuY29tL3hhcC8xLjAvIiB4bWxuczp4bXBNTT0iaHR0cDovL25zLmFkb2JlLmNvbS94YXAvMS4wL21tLyIgeG1sbnM6c3RSZWY9Imh0dHA6Ly9ucy5hZG9iZS5jb20veGFwLzEuMC9zVHlwZS9SZXNvdXJjZVJlZiMiIHhtcDpDcmVhdG9yVG9vbD0iQWRvYmUgUGhvdG9zaG9wIDIzLjEgKFdpbmRvd3MpIiB4bXBNTTpJbnN0YW5jZUlEPSJ4bXAuaWlkOjE1ODMxMjA3NTQ4MTExRUQ4QjQ3RTZBM0E0NkEyNzQxIiB4bXBNTTpEb2N1bWVudElEPSJ4bXAuZGlkOjE1ODMxMjA4NTQ4MTExRUQ4QjQ3RTZBM0E0NkEyNzQxIj4gPHhtcE1NOkRlcml2ZWRGcm9tIHN0UmVmOmluc3RhbmNlSUQ9InhtcC5paWQ6MTU4MzEyMDU1NDgxMTFFRDhCNDdFNkEzQTQ2QTI3NDEiIHN0UmVmOmRvY3VtZW50SUQ9InhtcC5kaWQ6MTU4MzEyMDY1NDgxMTFFRDhCNDdFNkEzQTQ2QTI3NDEiLz4gPC9yZGY6RGVzY3JpcHRpb24+IDwvcmRmOlJERj4gPC94OnhtcG1ldGE+IDw/eHBhY2tldCBlbmQ9InIiPz5/GolWAAAAHlBMVEWCs9OBs9OCs9KCstKBstKDtNKDs9OCs9SBsdEAAAB9VKxxAAAACnRSTlP///////////8AsswszwAAAKlJREFUeNq0ldsOgzAMQ+2ksPH/PzxNQ6xpIRch+ohyateOBLbiwfzpXQReLALAwwABlgDAl7gN8AuwAACBxF2AP4BpAIgksAmCI6OC+vOcLbEwv79Bc3a6R7fz+eakJJnrTawauZ96YGbeFGddJZpGERiSWkJgzCkEUATaEb54njA4YldJAPThMwGsdhf0qjp0AmbV2oXEH5hWTVxgPdFXOgCzP5SPAAMAM6Ur4JsjUFQAAAAASUVORK5CYII=");
   background-size: 24px;
   background-position: center left;
   background-repeat: repeat-x;
@@ -1044,15 +1044,19 @@ input:focus + label::before {
 .star-raiting-1 {
   width: 24px;
 }
+
 .star-raiting-2 {
   width: 48px;
 }
+
 .star-raiting-3 {
   width: 72px;
 }
+
 .star-raiting-4 {
   width: 96px;
 }
+
 .star-raiting-5 {
   width: 120px;
 }
@@ -1094,7 +1098,7 @@ input:focus + label::before {
   color: #000000;
   background-color: transparent;
   pointer-events: none;
-  }
+}
 
 /* Конец стилей "Гостиницы Седоны"
    ===================================== */
@@ -1102,7 +1106,6 @@ input:focus + label::before {
 /* Footer */
 
 .footer-container {
-  display: block;
   margin-top: 40px;
   margin-right: 71px;
   margin-bottom: 30px;
@@ -1120,7 +1123,7 @@ input:focus + label::before {
   align-items: center;
 }
 
-.footer-contacts-social-item a{
+.footer-contacts-social-item a {
   display: flex;
   width: 48px;
   height: 40px;
@@ -1139,7 +1142,7 @@ input:focus + label::before {
 }
 
 .social-icon:active {
-  fill: rgba(104, 162, 202, 0.30);
+  fill: rgba(104, 162, 202, 0.3);
 }
 
 .footer-phone-number {
@@ -1158,7 +1161,7 @@ input:focus + label::before {
 }
 
 .footer-phone-number:active {
-  color: rgb(117, 97, 87, 0.30);
+  color: rgb(117, 97, 87, 0.3);
 }
 
 .htmlacademy-link {
@@ -1171,7 +1174,7 @@ input:focus + label::before {
 }
 
 .htmlacademy-link:active {
-  color: rgba(117, 97, 87, 0.30);
+  color: rgba(117, 97, 87, 0.3);
 }
 
 .htmlacademy-logo {
@@ -1235,7 +1238,7 @@ input:focus + label::before {
 .modal-close-button:active {
   background-color: #e6e6e6;
   outline: none;
-  color:rgba(0, 0, 0, 0.3)
+  color: rgba(0, 0, 0, 0.3);
 }
 
 .modal h2 {
