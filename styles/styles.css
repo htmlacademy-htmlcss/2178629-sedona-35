@@ -137,6 +137,12 @@ img {
   overflow: hidden;
 }
 
+/* Inputs */
+
+input {
+  font-family: "PT sans", "Arial", sans-serif;
+}
+
 /* Main page */
 
 .page-container {
@@ -190,7 +196,7 @@ img {
 .user-navigation {
   display: flex;
   flex-wrap: wrap;
-  /* margin-left: auto; */
+  min-width: 360px;
   justify-content: flex-end;
 }
 
@@ -242,10 +248,10 @@ img {
   position: absolute;
   top: 11px;
   right: 4px;
-  width: 20px;
+  min-width: 20px;
   height: 20px;
   padding: 5px;
-  border-radius: 50%;
+  border-radius: 10px;
   background-color: #7db54f;
   color: #ffffff;
   font-size: 10px;
@@ -315,6 +321,8 @@ img {
   text-transform: uppercase;
   margin-top: 0;
   margin-bottom: 25px;
+  padding-left: 80px;
+  padding-right: 80px;
 }
 
 .advantages-common-text {
@@ -716,12 +724,13 @@ input:focus + label::before {
 }
 
 .hotels-search-filter .price {
-  max-width: 288px;
+  min-width: 288px;
   margin-left: auto;
 }
 
 .price.input-fields {
   display: flex;
+  justify-content: space-between;
   width: 100%;
 }
 
@@ -766,7 +775,12 @@ input:focus + label::before {
 }
 
 .min-price-field-container {
-  margin: 0 2px 0 0;
+  flex-grow: 1;
+  margin-right: 2px;
+}
+
+.max-price-field-container {
+  flex-grow: 1;
 }
 
 .min-price-field-container input {
@@ -824,7 +838,7 @@ input:focus + label::before {
 
 .hotels-search-filter .submit-section {
   min-width: 191px;
-  margin-left: 70px;
+  margin-left: 68px; /* pixel perfect */
   display: flex;
   flex-direction: column;
   align-self: flex-end;
@@ -1082,7 +1096,7 @@ input:focus + label::before {
   min-width: 60px;
   font-size: 20px;
   line-height: 28px;
-  padding: 16px 0 16px 0;
+  padding: 16px 8px 16px 8px;
   cursor: pointer;
   margin-right: 8px;
   margin-bottom: 8px;
@@ -1116,7 +1130,9 @@ input:focus + label::before {
 }
 
 .footer-contacts-social {
+  max-width: 280px;
   display: flex;
+  flex-wrap: wrap;
   margin: 0;
   padding: 0;
   list-style-type: none;
@@ -1269,7 +1285,6 @@ input:focus + label::before {
   font-size: 18px;
   line-height: 24px;
   font-weight: 700;
-  letter-spacing: -0.8px;
   padding: 13px 24px 11px 20px;
   background-color: #f2f2f2;
   border: none;
