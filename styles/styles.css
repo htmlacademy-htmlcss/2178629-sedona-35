@@ -876,18 +876,17 @@ img {
 
 .cards-sort {
   appearance: none;
-  width: 298px;
+  width: 292px;
   margin-left: auto;
   outline-offset: -2px;
   outline: 2px solid #e5e5e5;
   border-radius: 4px;
-  padding: 14px 24px;
+  padding: 14px 20px;
   font-size: 18px;
   line-height: 21px;
-  letter-spacing: -0.5px;
   background-image: url("../images/style-images/select-dropdown-arrow.svg");
   background-repeat: no-repeat;
-  background-position: right 20px top 50%;
+  background-position: right 18px top 45%;
   cursor: pointer;
 }
 
