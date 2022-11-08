@@ -619,9 +619,9 @@ img {
   background-image: url("../images/style-images/breadcrubs-arrow.svg");
 }
 
-/* Фильтр поиска гостиниц */
+/* Фильтр выбора гостиниц */
 
-form.hotels-search-filter {
+.hotels-search-filter form {
   display: flex;
   margin-left: -4px;
 }
@@ -658,7 +658,7 @@ form.hotels-search-filter {
   opacity: 0.6;
 }
 
-input:focus + label::before {
+.criteria:focus + label::before {
   outline: 3px solid #83b3b3;
 }
 
@@ -1408,7 +1408,7 @@ input:focus + label::before {
   margin-left: 10px;
 }
 
-button.tooltip-toggle {
+.tooltip button {
   position: relative;
   vertical-align: bottom;
   width: 26px;
