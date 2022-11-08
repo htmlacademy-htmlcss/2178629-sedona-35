@@ -139,7 +139,7 @@ img {
 
 /* Inputs */
 
-input {
+.input-field {
   font-family: "PT sans", "Arial", sans-serif;
 }
 
@@ -487,8 +487,8 @@ input {
 }
 
 .hotel-selection a {
-  padding-top: 12px; /* pixel-perfect */
-  padding-bottom: 14px; /* pixel-perfect */
+  padding-top: 12px;
+  padding-bottom: 14px;
 }
 
 /* Рассылка */
@@ -619,10 +619,9 @@ input {
   background-image: url("../images/style-images/breadcrubs-arrow.svg");
 }
 
-/* Фильтр поиска гостиниц */
+/* Фильтр выбора гостиниц */
 
-
-form.hotels-search-filter {
+.hotels-search-filter form {
   display: flex;
   margin-left: -4px;
 }
@@ -659,7 +658,7 @@ form.hotels-search-filter {
   opacity: 0.6;
 }
 
-input:focus + label::before {
+.criteria:focus + label::before {
   outline: 3px solid #83b3b3;
 }
 
@@ -838,7 +837,7 @@ input:focus + label::before {
 
 .hotels-search-filter .submit-section {
   min-width: 191px;
-  margin-left: 68px; /* pixel perfect */
+  margin-left: 68px;
   display: flex;
   flex-direction: column;
   align-self: flex-end;
@@ -1369,6 +1368,14 @@ input:focus + label::before {
   background-color: transparent;
 }
 
+.number-up {
+  left: 0;
+}
+
+.number-down {
+  right: 0;
+}
+
 .number-up:hover,
 .number-down:hover,
 .button-in-input-field:hover {
@@ -1395,21 +1402,13 @@ input:focus + label::before {
   outline: 3px solid #82b3d3;
 }
 
-.number-up {
-  left: 0;
-}
-
-.number-down {
-  right: 0;
-}
-
 .tooltip {
   display: inline-block;
   position: absolute;
   margin-left: 10px;
 }
 
-button.tooltip-toggle {
+.tooltip button {
   position: relative;
   vertical-align: bottom;
   width: 26px;
