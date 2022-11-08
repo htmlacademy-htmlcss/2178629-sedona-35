@@ -884,6 +884,7 @@ img {
   padding: 14px 20px;
   font-size: 18px;
   line-height: 21px;
+  background-color: #ffffff;
   background-image: url("../images/style-images/select-dropdown-arrow.svg");
   background-repeat: no-repeat;
   background-position: right 18px top 45%;
@@ -1350,8 +1351,8 @@ img {
   margin: 0;
 }
 
-.number-up,
-.number-down {
+.number-down,
+.number-up {
   position: absolute;
   top: 50%;
   transform: translateY(-50%);
@@ -1367,28 +1368,28 @@ img {
   background-color: transparent;
 }
 
-.number-up {
+.number-down {
   left: 0;
 }
 
-.number-down {
+.number-up {
   right: 0;
 }
 
-.number-up:hover,
 .number-down:hover,
+.number-up:hover,
 .button-in-input-field:hover {
   color: #000000;
 }
 
-.number-up:focus,
 .number-down:focus,
+.number-up:focus,
 .button-in-input-field:focus {
   outline: none;
 }
 
-.number-up:focus::after,
 .number-down:focus::after,
+.number-up:focus::after,
 .button-in-input-field:focus::after {
   position: absolute;
   content: "";
