@@ -1,24 +1,18 @@
 <!DOCTYPE html>
 <html lang="ru">
-
   <head>
     <meta charset="utf-8">
     <title>HTML Academy: Седона</title>
     <link rel="stylesheet" href="./styles/styles.css">
     <link rel="icon" type="image/png" sizes="32x32" href="./images/favicon.png">
   </head>
-
   <body>
     <div class="page-container">
-
       <header class="page-header" data-test="header">
-
         <nav class="main-navigation">
-
           <a href="#" class="logo">
             <img src="./images/logo-sedona.svg" width="140" height="70" alt="Логотип сайта Седона.">
           </a>
-
           <ul class="navigation site-navigation">
             <li class="navigation-item ">
               <a class="navigation-link navigation-link-current">Главная</a>
@@ -30,7 +24,6 @@
               <a href="./hotels.html" class="navigation-link">Гостиницы</a>
             </li>
           </ul>
-
           <ul class="navigation user-navigation">
             <li class="navigation-item">
               <a href="#" class="navigation-link navigation-icon">
@@ -63,19 +56,14 @@
               </a>
             </li>
           </ul>
-
         </nav>
-
       </header>
-
       <main class="main-index" data-test="main">
-
         <h1 class="visually-hidden">Добро пожаловать в великолепную Седону, которая круче, чем Гранд-Каньон!</h1>
-
         <div class="hero-block">
           <img class="hero-banner" src="./images/welcome.svg" alt="Welcome to Sedona." width="458" height="352">
         </div>
-
+        <!-- Преимущества -->
         <section class="advantages">
           <h2>Седона — небольшой городок в Аризоне,<br> заслуживающий большего!</h2>
           <p class="advantages-common-text">Рассмотрим причины, по которым Седона круче, чем Гранд-Каньон!</p>
@@ -108,7 +96,7 @@
             </li>
           </ul>
         </section>
-
+        <!-- Сервисы -->
         <section class="services">
           <h2 class="visually-hidden">Популярные услуги</h2>
           <ul class="services-list">
@@ -126,28 +114,26 @@
             </li>
           </ul>
         </section>
-
+        <!-- Выбор гостиниц -->
         <section class="hotel-selection">
           <h2 class="visually-hidden">Выбор лучшей гостиницы по предполагаемым датам поездки</h2>
           <p class="section-visible-header">Заинтересовались?</p>
           <p class="hotel-selection-plain-text">Укажите предполагаемые даты поездки,<br>и мы покажем вам лучшие предложения гостиниц в Седоне</p>
           <a href="#" class="button big-button button-brown">Поиск гостиницы в Седоне</a>
         </section>
-
+        <!-- Подписка на новостную рассылку -->
         <section class="newsletter-subscription">
           <h2>Подпишитесь на рассылку</h2>
           <p>Только полезная информация и никакого спама,<br>честное бойскаутское!</p>
           <form class="newsletter-subscription-form" action="https://echo.htmlacademy.ru" method="post">
-            <label>
+            <label for="newsletter-email-input">
               <span class="visually-hidden">Введите адрес вашей электронной почты</span>
             </label>
-            <input type="email" name="newsletterSubscriptionEmail" placeholder="Ваш e-mail" required>
+            <input class="input-field" type="email" id="newsletter-email-input" name="newsletterSubscriptionEmail" placeholder="Ваш e-mail" required>
             <button type="submit" class="button big-button button-blue">Подписаться</button>
           </form>
         </section>
-
       </main>
-
       <footer class="page-footer">
         <div class="footer-container">
           <ul class="footer-contacts-social">
@@ -219,7 +205,7 @@
           </a>
         </div>
       </footer>
-
+      <!-- Модльаное окно -->
       <!-- For displaing modal element delete class .closed on the next line -->
       <div class="modal-container closed">
         <div class="modal hotels-search-modal">
@@ -241,7 +227,7 @@
                 <label for="check-in">Дата Заезда:</label>
               </div>
               <div class="check-in input-container">
-                <input class="input-modal-dates" id="check-in" type="text" name="check-in-date" placeholder="27 апреля 2020" required>
+                <input class="input-field input-modal-dates" id="check-in" type="text" name="check-in-date" placeholder="27 апреля 2020" required>
                 <button class="button-in-input-field" type="button">
                   <span class="visually-hidden">Выбор даты заезда.</span>
                   <svg
@@ -261,7 +247,7 @@
                 <label for="check-out">Дата Выезда:</label>
               </div>
               <div class="check-out input-container">
-                <input class="input-modal-dates" id="check-out" type="text" name="check-out-date" placeholder="1 сентября 2023" required>
+                <input class="input-field input-modal-dates" id="check-out" type="text" name="check-out-date" placeholder="1 сентября 2023" required>
                 <button class="button-in-input-field" type="button">
                   <span class="visually-hidden">Выбор даты отъезда.</span>
                   <svg
@@ -281,7 +267,7 @@
                 <label for="adults">Взрослые:</label>
               </div>
               <div class="persons-container adults">
-                <input type="number" id="adults" name="adults-number" placeholder="2" value="2">
+                <input class="input-field" type="number" id="adults" name="adults-number" placeholder="2" value="2">
                 <div class="input-buttons">
                   <button class="persons number-up" type="button">
                     <svg
@@ -324,7 +310,7 @@
                 </div>
               </div>
               <div class="persons-container kids">
-                <input type="number" id="kids" name="kids-number" placeholder="2" value="2">
+                <input class="input-field" type="number" id="kids" name="kids-number" placeholder="2" value="2">
                 <div class="input-buttons">
                   <button class="persons number-up" type="button">
                     <svg
@@ -357,5 +343,4 @@
       </div>
     </div>
   </body>
-
 </html>

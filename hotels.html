@@ -1,24 +1,18 @@
 <!DOCTYPE html>
 <html lang="ru">
-
   <head>
     <meta charset="utf-8">
     <title>HTML Academy: Седона. Гостиницы</title>
     <link rel="stylesheet" href="./styles/styles.css">
     <link rel="icon" type="image/png" sizes="32x32" href="./images/favicon.png">
   </head>
-
   <body>
     <div class="page-container">
-
       <header class="page-header">
-
         <nav class="main-navigation">
-
           <a href="./index.html" class="logo">
             <img src="./images/logo-sedona.svg" width="140" height="70" alt="Логотип сайта Седона.">
           </a>
-
           <ul class="navigation site-navigation">
             <li class="navigation-item">
               <a href="./index.html" class="navigation-link">Главная</a>
@@ -30,7 +24,6 @@
               <a class="navigation-link navigation-link-current">Гостиницы</a>
             </li>
           </ul>
-
           <ul class="navigation user-navigation">
             <li class="navigation-item">
               <a href="#" class="navigation-link navigation-icon">
@@ -63,15 +56,12 @@
               </a>
             </li>
           </ul>
-
         </nav>
-
       </header>
-
       <main class="main-page">
-
         <div class="main-header">
           <h1>Гостиницы Седоны</h1>
+          <!-- Хлебные крошки -->
           <nav class="crumbs">
             <ol class="crumbs-list">
               <li class="crumb">
@@ -93,10 +83,11 @@
               <li class="crumb">Гостиницы</li>
             </ol>
           </nav>
-
+          <!-- Фильтр выбора гостиниц -->
           <section>
             <h2 class="visually-hidden">Фильтр выбора гостиницы</h2>
               <form class="hotels-search-filter" action="https://echo.htmlacademy.ru" method="post">
+                <!-- Инфраструктура -->
                 <fieldset class="infrastructure radio-check-selectors">
                   <legend>Инфраструктура:</legend>
                   <ul class="infrastructure criteria-list">
@@ -114,6 +105,7 @@
                     </li>
                   </ul>
                 </fieldset>
+                <!-- Тип Жилья -->
                 <fieldset class="hotel-type radio-check-selectors">
                   <legend>Тип Жилья:</legend>
                   <ul class="hotel-type criteria-list">
@@ -131,16 +123,17 @@
                     </li>
                   </ul>
                 </fieldset>
+                <!-- Ценовой диапазон -->
                 <fieldset class="price">
                   <legend>Стоимость, &#8381;:</legend>
                   <div class="price input-fields">
                     <div class="min-price-field-container">
                       <label for="min-price-field"><span class="visually-hidden">Цена</span>от</label>
-                      <input type="number" name="min-price" min="0" max="9000" step="100" id="min-price-field" placeholder="0" value="0">
+                      <input class="input-field" type="number" name="min-price" min="0" max="9000" step="100" id="min-price-field" placeholder="0" value="0">
                     </div>
                     <div class="max-price-field-container">
                       <label for="max-price-field">до</label>
-                      <input type="number" name="max-price" min="0" max="9000" step="100" id="max-price-field" placeholder="9000" value="9000">
+                      <input class="input-field" type="number" name="max-price" min="0" max="9000" step="100" id="max-price-field" placeholder="9000" value="9000">
                     </div>
                   </div>
                   <div class="price-range-fader">
@@ -165,9 +158,10 @@
               </form>
           </section>
         </div>
-
+        <!-- Результаты поиска гостиниц -->
         <div class="hotel-search-results">
           <h2 class="visually-hidden">Результаты поиска гостиниц</h2>
+          <!-- Опции показа результатов -->
           <div class="hotel-cards-sorter">
             <p class="section-visible-header">Найдено гостиниц: <span class="search-counter">38</span></p>
             <select class="cards-sort" name="cards-sort" id="cards-sort-dropdown">
@@ -192,7 +186,7 @@
               </li>
             </ul>
           </div>
-
+          <!-- Карточки гостиниц -->
           <ul class="hotel-cards">
             <li class="hotel-card">
               <a href="#">
@@ -275,7 +269,7 @@
               </div>
             </li>
           </ul>
-
+          <!-- Пагинация вывода карточек гостиниц-->
           <ul class="hotel-cards-pagination">
             <li>
               <span class="button pagination-link pagination-link-current">1</span>
@@ -295,21 +289,19 @@
             </li>
           </ul>
         </div>
-
+        <!-- Подписка на новостную рассылку -->
         <section class="newsletter-subscription no-bg">
           <h2>Подпишитесь на рассылку</h2>
           <p>Только полезная информация и никакого спама,<br>честное бойскаутское!</p>
           <form class="newsletter-subscription-form" action="https://echo.htmlacademy.ru" method="post">
-            <label>
+            <label for="newsletter-email-input">
               <span class="visually-hidden">Введите адрес вашей электронной почты</span>
             </label>
-            <input type="email" name="newsletterSubscriptionEmail" placeholder="Ваш e-mail" required>
+            <input class="input-field" type="email" id="newsletter-email-input" name="newsletterSubscriptionEmail" placeholder="Ваш e-mail" required>
             <button type="submit" class="button big-button button-blue">Подписаться</button>
           </form>
         </section>
-
       </main>
-
       <footer class="page-footer">
         <div class="footer-container">
           <ul class="footer-contacts-social">
@@ -380,9 +372,6 @@
           </a>
         </div>
       </footer>
-
     </div>
-
   </body>
-
 </html>

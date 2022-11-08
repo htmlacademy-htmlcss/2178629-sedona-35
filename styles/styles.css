@@ -139,7 +139,7 @@ img {
 
 /* Inputs */
 
-input {
+.input-field {
   font-family: "PT sans", "Arial", sans-serif;
 }
 
@@ -487,8 +487,8 @@ input {
 }
 
 .hotel-selection a {
-  padding-top: 12px; /* pixel-perfect */
-  padding-bottom: 14px; /* pixel-perfect */
+  padding-top: 12px;
+  padding-bottom: 14px;
 }
 
 /* Рассылка */
@@ -620,7 +620,6 @@ input {
 }
 
 /* Фильтр поиска гостиниц */
-
 
 form.hotels-search-filter {
   display: flex;
@@ -838,7 +837,7 @@ input:focus + label::before {
 
 .hotels-search-filter .submit-section {
   min-width: 191px;
-  margin-left: 68px; /* pixel perfect */
+  margin-left: 68px;
   display: flex;
   flex-direction: column;
   align-self: flex-end;
@@ -1369,6 +1368,14 @@ input:focus + label::before {
   background-color: transparent;
 }
 
+.number-up {
+  left: 0;
+}
+
+.number-down {
+  right: 0;
+}
+
 .number-up:hover,
 .number-down:hover,
 .button-in-input-field:hover {
@@ -1393,14 +1400,6 @@ input:focus + label::before {
   height: 20px;
   border-radius: 4px;
   outline: 3px solid #82b3d3;
-}
-
-.number-up {
-  left: 0;
-}
-
-.number-down {
-  right: 0;
 }
 
 .tooltip {
