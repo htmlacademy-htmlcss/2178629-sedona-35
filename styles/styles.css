@@ -265,11 +265,13 @@ img {
 }
 
 .header-navigation-button {
+  display: block;
   margin-left: 20px;
-  padding-top: 14px;
+  margin-top: 14px;
+  /* padding-top: 14px;
   padding-left: 0;
   padding-right: 0;
-  padding-bottom: 14px;
+  padding-bottom: 14px; */
 }
 
 .header-navigation-button span {
