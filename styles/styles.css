@@ -265,23 +265,9 @@ img {
 }
 
 .header-navigation-button {
-  margin-left: 20px;
-  padding-top: 14px;
-  padding-left: 0;
-  padding-right: 0;
-  padding-bottom: 14px;
-}
-
-.header-navigation-button span {
   display: block;
-}
-
-.header-navigation-button:focus {
-  outline-style: none;
-}
-
-.header-navigation-button:focus span {
-  outline: 2px solid #000000;
+  margin-left: 20px;
+  margin-top: 14px;
 }
 
 /* Hero */
@@ -468,7 +454,7 @@ img {
 
 .hotel-selection {
   padding: 96px 304px;
-  padding-bottom: 104px;
+  padding-bottom: 95px;
 }
 
 .section-visible-header {
@@ -483,12 +469,11 @@ img {
 
 .hotel-selection-plain-text {
   margin-top: 0;
-  margin-bottom: 61px;
+  margin-bottom: 54px;
 }
 
 .hotel-selection a {
-  padding-top: 12px;
-  padding-bottom: 14px;
+  display: inline-block;
 }
 
 /* Рассылка */
@@ -723,14 +708,22 @@ img {
 }
 
 .hotels-search-filter .price {
-  min-width: 288px;
+  width: 288px;
   margin-left: auto;
 }
 
 .price.input-fields {
   display: flex;
   justify-content: space-between;
-  width: 100%;
+}
+
+.min-price-field-container {
+  flex-grow: 1;
+  margin-right: 2px;
+}
+
+.max-price-field-container {
+  flex-grow: 1;
 }
 
 .input-fields > div {
@@ -773,15 +766,6 @@ img {
   margin: 0;
 }
 
-.min-price-field-container {
-  flex-grow: 1;
-  margin-right: 2px;
-}
-
-.max-price-field-container {
-  flex-grow: 1;
-}
-
 .min-price-field-container input {
   border-radius: 4px 0 0 4px;
 }
@@ -795,6 +779,10 @@ img {
   top: 12px;
   right: 20px;
   color: rgb(0, 0, 0, 0.3);
+}
+
+.price.input-fields .price-input-pseudo-placeholder {
+  line-height: 24px;
 }
 
 .price-range-fader {
@@ -837,7 +825,7 @@ img {
 
 .hotels-search-filter .submit-section {
   min-width: 191px;
-  margin-left: 68px;
+  margin-left: 69px;
   display: flex;
   flex-direction: column;
   align-self: flex-end;
@@ -884,6 +872,7 @@ img {
   padding: 14px 20px;
   font-size: 18px;
   line-height: 21px;
+  background-color: #ffffff;
   background-image: url("../images/style-images/select-dropdown-arrow.svg");
   background-repeat: no-repeat;
   background-position: right 18px top 45%;
@@ -972,8 +961,8 @@ img {
   display: grid;
   grid-template-columns: repeat(auto-fill, minmax(300px, 1fr));
   column-gap: 20px;
-  row-gap: 23px;
-  margin-bottom: 80px;
+  row-gap: 22px;
+  margin-bottom: 79px;
 }
 
 .hotel-card {
@@ -981,6 +970,7 @@ img {
   flex-direction: column;
   padding: 18px;
   padding-top: 17px;
+  padding-bottom: 20px;
   border-width: 1px;
   border-style: solid;
   border-color: #e6e6e6;
@@ -1073,9 +1063,12 @@ img {
   width: 120px;
 }
 
-.raiting {
+.button.button-hotel-card.raiting {
+  font-size: 16px;
   font-weight: 400;
-  letter-spacing: -0.6px;
+  line-height: 20px;
+  padding-top: 9px;
+  padding-bottom: 7px;
   color: #333333;
   background-color: #f2f2f2;
   pointer-events: none;
@@ -1093,8 +1086,8 @@ img {
   display: block;
   min-width: 60px;
   font-size: 20px;
-  line-height: 28px;
-  padding: 16px 8px 16px 8px;
+  line-height: 36px;
+  padding: 12px 8px;
   cursor: pointer;
   margin-right: 8px;
   margin-bottom: 8px;
@@ -1107,7 +1100,10 @@ img {
 }
 
 .pagination-link-dots {
+  font-size: 22px;
+  line-height: 26px;
   color: #000000;
+  padding: 17px 21px;
   background-color: transparent;
   pointer-events: none;
 }
@@ -1350,8 +1346,8 @@ img {
   margin: 0;
 }
 
-.number-up,
-.number-down {
+.number-down,
+.number-up {
   position: absolute;
   top: 50%;
   transform: translateY(-50%);
@@ -1367,28 +1363,28 @@ img {
   background-color: transparent;
 }
 
-.number-up {
+.number-down {
   left: 0;
 }
 
-.number-down {
+.number-up {
   right: 0;
 }
 
-.number-up:hover,
 .number-down:hover,
+.number-up:hover,
 .button-in-input-field:hover {
   color: #000000;
 }
 
-.number-up:focus,
 .number-down:focus,
+.number-up:focus,
 .button-in-input-field:focus {
   outline: none;
 }
 
-.number-up:focus::after,
 .number-down:focus::after,
+.number-up:focus::after,
 .button-in-input-field:focus::after {
   position: absolute;
   content: "";
@@ -1466,6 +1462,7 @@ img {
 .modal-search-form > button {
   grid-column: 1 / -1;
   border-radius: 10px;
-  padding-top: 12px;
-  padding-bottom: 12px;
+  padding-top: 18px;
+  padding-bottom: 18px;
+  line-height: 24px;
 }
