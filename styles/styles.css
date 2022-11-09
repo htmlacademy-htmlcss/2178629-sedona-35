@@ -723,14 +723,22 @@ img {
 }
 
 .hotels-search-filter .price {
-  min-width: 288px;
+  width: 288px;
   margin-left: auto;
 }
 
 .price.input-fields {
   display: flex;
   justify-content: space-between;
-  width: 100%;
+}
+
+.min-price-field-container {
+  flex-grow: 1;
+  margin-right: 2px;
+}
+
+.max-price-field-container {
+  flex-grow: 1;
 }
 
 .input-fields > div {
@@ -773,15 +781,6 @@ img {
   margin: 0;
 }
 
-.min-price-field-container {
-  flex-grow: 1;
-  margin-right: 2px;
-}
-
-.max-price-field-container {
-  flex-grow: 1;
-}
-
 .min-price-field-container input {
   border-radius: 4px 0 0 4px;
 }
@@ -800,8 +799,6 @@ img {
 .price.input-fields .price-input-pseudo-placeholder {
   line-height: 24px;
 }
-
-
 
 .price-range-fader {
   position: relative;
