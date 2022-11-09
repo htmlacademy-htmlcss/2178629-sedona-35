@@ -454,7 +454,7 @@ img {
 
 .hotel-selection {
   padding: 96px 304px;
-  padding-bottom: 104px;
+  padding-bottom: 95px;
 }
 
 .section-visible-header {
@@ -469,12 +469,11 @@ img {
 
 .hotel-selection-plain-text {
   margin-top: 0;
-  margin-bottom: 61px;
+  margin-bottom: 54px;
 }
 
 .hotel-selection a {
-  padding-top: 12px;
-  padding-bottom: 14px;
+  display: inline-block;
 }
 
 /* Рассылка */
@@ -826,7 +825,7 @@ img {
 
 .hotels-search-filter .submit-section {
   min-width: 191px;
-  margin-left: 68px;
+  margin-left: 69px;
   display: flex;
   flex-direction: column;
   align-self: flex-end;
